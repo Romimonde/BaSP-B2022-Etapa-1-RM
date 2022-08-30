@@ -1,7 +1,29 @@
 #Trackgenix
 
-Description: Trackgenix is
+Description: Trackgenix is an amazing app that helps you track your teams' progress.
+In this app you can easily add a Project you're working on, add employees to this projects, and assign them roles and rates.
+Your employees can upload the amount of hours they have been working and specifies in which projects, tasks and what activities
+have they done. After that, Trackgenix allows you to visualize reports of your team progress. 
 
-How to use:
+How to use it: 
+First, go to www.trackgenix.com. Create an account and sign in.
 
-Author: Romina Mondello
+Once you're logged in on the web page you can download the app to your pc or mobile.
+
+After you download the app, you can access with your current account, and you're ready to start!
+
+First of all, you need to add a Project. Just write the name of the project or the company your working with.
+You'll have to specify the date of start and end, write a little description of what is expected and add which roles are needed.
+When you have your first project created succesfully, your employees can access to their accounts as well.
+
+As an employee, you can edit you account. Add a picture, edit your name, change your password and delete your account.
+Although, the most important actions you can do are:
+Visualize in which Projects you have been included
+Visualize which role you take part on it.
+Upload the hours you have been working and spicify what you have done.
+
+If you're an PM employee, there are some more actions you can do:
+You can see and print reports of your partners progress. Trackgenix will show you charts of: which role of the team worked more hours, in which time they worked more and who completed more tasks in a certain period of time.
+You also have to admit the hours that other users register as personal worked hours.
+
+Author: Radium Rocket BaSP Group B
