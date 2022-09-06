@@ -1,17 +1,27 @@
-#Trackgenix
+# Trackgenix
 
-Description: Trackgenix is an amazing app that helps you track your teams' progress.
+# Description:
+Trackgenix is an amazing app that helps you track your teams' progress.
 In this app you can easily add a Project you're working on, add employees to this projects, and assign them roles and rates.
 Your employees can upload the amount of hours they have been working and specifies in which projects, tasks and what activities
 have they done. After that, Trackgenix allows you to visualize reports of your team progress. 
 
-How to use it: 
-First, go to www.trackgenix.com. Create an account and sign in.
+```
+# How to use it: 
+1- First, go to www.trackgenix.com. Create an account and sign in.
 
-Once you're logged in on the web page you can download the app to your pc or mobile.
+2- Once you're logged in on the web page you can download the app to your pc or mobile.
 
-After you download the app, you can access with your current account, and you're ready to start!
+3- After you download the app, you can access with your current account, and you're ready to start!
 
+```
+
+## Web Page
+The web page will help you understand the benefits and all the purposes Trackgenix can help you on.
+You'll understand easily all the functions you can do with the app.
+And you'll also get to know Gigatech a little bit more, by reading its story.
+
+## App
 First of all, you need to add a Project. Just write the name of the project or the company your working with.
 You'll have to specify the date of start and end, write a little description of what is expected and add which roles are needed.
 When you have your first project created succesfully, your employees can access to their accounts as well.
@@ -26,4 +36,15 @@ If you're an PM employee, there are some more actions you can do:
 You can see and print reports of your partners progress. Trackgenix will show you charts of: which role of the team worked more hours, in which time they worked more and who completed more tasks in a certain period of time.
 You also have to admit the hours that other users register as personal worked hours.
 
-Author: Radium Rocket BaSP Group B
+## Semana 1
+We made the UI design of the Landing page and the app, and prototype it on figma.
+We had to agree on the style we wanted to apply and divided the work by the roles you can take on the app. 
+
+## Semana 2
+We started creating the html structure of the landing page on VSCode. Trying to make the best Layout for this project.
+
+## Semana 3
+We started the styling of the landing page using css, trying it is a pixel perfect representation.
+To approach this, we had to made some changes on the html structure.
+
+### Author: Radium Rocket BaSP Group B
