@@ -48,6 +48,7 @@ aside {
     width: 20%;
     height: 100%;
     opacity: .5;
+    font-family: roboto;
   }
 footer {
     position: relative;
@@ -259,7 +260,6 @@ footer {
 .company {
     display: inline-block;
     margin: 40px 20px 40px 20px;
-
 }
 .support {
     display: inline-block;
