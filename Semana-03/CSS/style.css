@@ -24,7 +24,9 @@ h2 {
     color: black;
 }
 form {
-    margin: auto;
+    width: 450px;
+    height: 450px;
+    background-color: #AACE9B;
     display: inline-block;
     font-family: roboto;
 }
@@ -98,9 +100,7 @@ footer {
     color:#AACE9B
 }
 .box1 {
-    position: relative;
-    display: inline-block;
-    right: 0px;
+    float: right;
     width: 255px;
     height: 115px;
     border-radius: 8px 0px 0px 8px;
@@ -113,21 +113,26 @@ footer {
     background-color: #AACE9B;
     text-align: center;
 }
-.info1 {
+.para-title {
     position: relative;
     text-align: center;
-    font-family: inter, roboto, sans-serif;
+    font-family: roboto, sans-serif;
+    top: 100px;
+    left: 10%;
     font-size: 30px;
+    color: black;
 }
-.info2 {
+.para1 {
     position: relative;
-    display: inline-block;
-    text-align: center;
-    font-family: roboto;
-    width: 600px;
-    height: 600px;
-    font-size: 16px;
+    display: block;
     text-align: justify;
+    margin: auto;
+    font-family: roboto;
+    font-size: 16px;
+    line-height: 25px;
+    width: 320px;
+    padding: 20px;
+    top: 120px;
 }
 .bubble {
     width: 150px;
@@ -144,9 +149,9 @@ footer {
     background-color: #373867;
 }
 .history {
-    display: inline-block;
-    left: 465px;
-    top: 1175px;
+    position: relative;
+    text-align: center;
+    margin: auto;
     background-color: #D9D9D9;
     width: 460px;
     height: 410px;
@@ -160,6 +165,7 @@ footer {
     text-align: justify;
 }
 .form-title {
+    text-align: center;
     display: inline-block;
     font-family: roboto;
 }
@@ -189,9 +195,11 @@ footer {
     display: inline-block;
     padding: 5px;
     left: 42.5%;
+    top: 40px;
 }
 .copy {
     position: relative;
     display: block;
     text-align: center;
+    top: 40px;
 }
