@@ -41,21 +41,14 @@ h3 {
     padding: 30px 0;
     color: #373867;
 }
-h4 {
-    font-family: roboto;
-    font-weight: bold;
-}
 aside {
     position: fixed;
     top: 0;
     background-color: #707070;
     width: 20%;
     height: 100%;
+    opacity: .5;
   }
-span{
-    font-weight: bold;
-    color: #AACE9B;
-}
 footer {
     position: relative;
     width: 100%;
@@ -118,14 +111,16 @@ footer {
     position: relative;
     float: right;
     top: 340px;
-    width: 255px;
-    height: 115px;
+    width: 355px;
+    height: 190px;
     border-radius: 8px 0px 0px 8px;
     opacity: .8;
     letter-spacing: 5px;
-    padding: 15px;
+    line-height: 30px;
+    padding: 15px 70px 30px 15px;
     font-family: roboto;
     font-size: 16px;
+    font-weight: bold;
     color: #373867;
     background-color: #AACE9B;
     text-align: center;
@@ -188,11 +183,12 @@ footer {
     padding-top: 40px;
 }
 .bubble-container {
+    margin-top: 150px;
     width: 20%;
     float: right;
 }
 .bubble {
-    text-align: center;
+    text-align: ce;
     position: relative;
     display: block;
     width: 130px;
@@ -207,6 +203,7 @@ footer {
     box-sizing: border-box;
     padding: 30px 10px 10px 10px;
     border-color: #707070;
+    margin: 10px;
 }
 .bubble2 {
     text-align: center;
@@ -216,7 +213,7 @@ footer {
     width: 130px;
     height: 130px;
     left: 60px;
-    margin: 40px;
+    margin: 30px;
     border-radius: 50%;
     background-color: #373867;
     font-family: roboto;
@@ -227,6 +224,10 @@ footer {
     box-sizing: border-box;
     padding-top: 40px;
     border-color: #707070;
+}
+.bubble-text {
+    font-weight: bold;
+    color: #AACE9B;
 }
 .history {
     margin-top: 50px;
@@ -247,26 +248,22 @@ footer {
     display: block;
     font-family: roboto;
 }
+.lists {
+    text-align: center;
+    font-family: roboto;
+}
 .our-product {
     display: inline-block;
-    margin: auto;
-    height: 300px;
-    width: 100px;
-    left: 300px;
+    margin: 40px 20px 40px 0;
 }
 .company {
     display: inline-block;
-    margin: auto;
-    height: 300px;
-    width: 100px;
-    left: 500px;
+    margin: 40px 20px 40px 20px;
+
 }
 .support {
     display: inline-block;
-    margin: auto;
-    height: 300px;
-    width: 100px;
-    left: 700px;
+    margin: 40px 0px 40px 20px;
 }
 .footer-img {
     position: relative;
