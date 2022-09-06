@@ -24,14 +24,37 @@ h2 {
     color: black;
 }
 form {
-    position: relative;
     margin: auto;
     width: 450px;
-    height: 450px;
-    line-height: 20px;
+    height: 400px;
+    line-height: 40px;
     display: block;
     font-family: roboto;
-    background-color: #373867;
+    margin-bottom: 50px;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b4b4b4;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=textarea] {
+    width: 100%;
+    height: 20%;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
 }
 h3 {
     text-align: center;
@@ -47,7 +70,6 @@ aside {
     background-color: #707070;
     width: 20%;
     height: 100%;
-    opacity: .5;
     font-family: roboto;
   }
 footer {
@@ -71,6 +93,10 @@ footer {
     position: relative;
     top: 30px;
     left: 30px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #707070;
+    padding: 5px;
 }
 .nav-bar-1 {
     position: relative;
@@ -83,6 +109,12 @@ footer {
 .home-icon {
     position: relative;
     left: 0;
+}
+.contact {
+    position: absolute;
+    display: inline-block;
+    bottom: 0px;
+    margin-bottom: 190px;
 }
 .background {
     position: relative;
@@ -244,10 +276,12 @@ footer {
 }
 .form-title {
     position: relative;
-    margin: auto;
     text-align: center;
     display: block;
     font-family: roboto;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 50px;
 }
 .lists {
     text-align: center;
