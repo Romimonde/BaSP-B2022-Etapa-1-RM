@@ -69,6 +69,10 @@ aside {
 aside a {
     color: #FFFFFF;
 }
+ul li a img {
+    position: absolute;
+    left: -30px;
+}
 footer {
     position: relative;
     width: 100%;
@@ -103,17 +107,6 @@ footer {
     font-family: roboto, sans-serif;
     font-size: 15px;
     line-height: 30px;
-}
-.imgs-menu {
-    position: absolute;
-    display: block;
-    width: 30px;
-    left: -30px;
-    bottom: 120px;
-}
-.home-icon {
-    position: relative;
-    left: 0;
 }
 .contact {
     position: absolute;
