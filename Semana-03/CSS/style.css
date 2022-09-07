@@ -65,7 +65,10 @@ aside {
     top: 0;
     background-color: #707070;
     font-family: roboto, sans-serif;
-  }
+}
+aside a {
+    color: #FFFFFF;
+}
 footer {
     position: relative;
     width: 100%;
@@ -101,6 +104,13 @@ footer {
     font-size: 15px;
     line-height: 30px;
 }
+.imgs-menu {
+    position: absolute;
+    display: block;
+    width: 30px;
+    left: -30px;
+    bottom: 120px;
+}
 .home-icon {
     position: relative;
     left: 0;
@@ -110,6 +120,15 @@ footer {
     display: inline-block;
     bottom: 0px;
     margin-bottom: 190px;
+    color: #FFFFFF;
+}
+.contact p {
+    padding: 15px;
+    text-align: left
+}
+.contact img {
+    position: relative;
+    margin-left: 15px;
 }
 .background {
     position: relative;
@@ -151,7 +170,6 @@ footer {
     line-height: 30px;
     opacity: .8;
     color: #373867;
-
     text-align: center;
 }
 .section1 {
@@ -246,7 +264,6 @@ footer {
     font-weight: bold;
     text-align: center;
     color: #FFFFFF;
-
 }
 .bubble-text {
     font-weight: bold;
@@ -285,15 +302,15 @@ footer {
 }
 .our-product {
     display: inline-block;
-    margin: 40px 20px 40px 0;
+    margin: 80px 40px 80px 0;
 }
 .company {
     display: inline-block;
-    margin: 40px 20px 40px 20px;
+    margin: 80px 40px 80px 40px;
 }
 .support {
     display: inline-block;
-    margin: 40px 0px 40px 20px;
+    margin: 80px 0px 80px 40px;
 }
 .footer-img {
     position: relative;
