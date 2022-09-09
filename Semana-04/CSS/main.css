@@ -1,0 +1,126 @@
+main {
+    flex-direction: column;
+}
+#img1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 0px 80px 80px 0px;
+}
+.text-img {
+    display: inline;
+    width: 356px;
+    height: 145px;
+    left: 20%;
+    top: 100px;
+    margin-left: 30px;
+    font-family: roboto, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color:#AACE9B
+}
+form {
+    display: block;
+    width: 450px;
+    height: 400px;
+    margin: auto;
+    margin-bottom: 50px;
+    font-family: roboto, sans-serif;
+    line-height: 40px;
+}
+input[type=text] {
+    display: inline-block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #b4b4b4;
+    border-radius: 4px;
+}
+input[type=submit] {
+    width: 100%;
+    margin: 8px 0;
+    padding: 14px 20px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+h3 {
+    padding: 30px 0;
+    font-size: 28px;
+    font-family: roboto, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #373867;
+}
+.green-box {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    left: 30%;
+    margin: 150px 10px 50px 10px;
+    padding-top: 40px;
+    box-sizing: border-box;
+    background-color: #AACE9B;
+    border-radius: 10px;
+    font-family: roboto, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.bubble-container {
+    width: 20%;
+    margin-top: 150px;
+}
+.bubble {
+    display: block;
+    width: 130px;
+    height: 130px;
+    margin: 10px;
+    padding: 30px 10px 10px 10px;
+    box-sizing: border-box;
+    background-color: #373867;
+    border-radius: 50%;
+    border: 10px solid #707070;
+    font-family: roboto, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFFF;
+}
+.bubble2 {
+    display: block;
+    width: 130px;
+    height: 130px;
+    margin: 30px;
+    padding-top: 40px;
+    right: 0px;
+    left: 60px;
+    box-sizing: border-box;
+    background-color: #373867;
+    border: 10px solid #707070;
+    border-radius: 50%;
+    font-family: roboto, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #FFFFFF;
+}
+.bubble-text {
+    font-weight: bold;
+    color: #AACE9B;
+}
+.lists {
+    text-align: center;
+    font-family: roboto, sans-serif;
+}
+.our-product {
+    display: inline-block;
+    margin: 80px 40px 80px 0;
+}
+.company {
+    display: inline-block;
+    margin: 80px 40px 80px 40px;
+}
+.support {
+    display: inline-block;
+    margin: 80px 0px 80px 40px;
+}

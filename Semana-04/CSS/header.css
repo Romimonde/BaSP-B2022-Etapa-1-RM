@@ -1,0 +1,18 @@
+header {
+    height: 275px;
+    width: 100%;
+    background: #373867;
+}
+h1 {
+    top: 90px;
+    left: 90px;
+    font-family: roboto, sans-serif;
+    font-size: 250%;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+h2 {
+    font-family: roboto, sans-serif;
+    font-size: 70%;
+    color: black;
+}

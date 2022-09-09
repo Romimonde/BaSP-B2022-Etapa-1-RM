@@ -1,0 +1,15 @@
+footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    background: #373867;
+}
+.footer-img {
+    padding: 10px;
+    filter: invert();
+}
+.copy {
+    padding-bottom: 20px;
+    color: #FFFFFF;
+}
