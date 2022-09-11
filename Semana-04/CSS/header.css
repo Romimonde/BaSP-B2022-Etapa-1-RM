@@ -34,3 +34,15 @@ h2 {
 .icons-small img {
     padding: 0px 3px;
 }
+@media screen and (min-width: 480px) {
+    .three-dots-menu {
+        align-self: flex-start;
+    }
+    .icons-small {
+        display: block;
+        align-self: flex-end;
+    }
+    #img1-0 {
+        display: none;
+    }
+}
