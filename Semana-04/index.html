@@ -20,7 +20,10 @@
     </head>
     <body>
         <header>
-            <img src="assets/623158_three dots_icon (1).png">
+            <img src="assets/623158_three dots_icon (1).png" alt="three dots menu" width="30px" height="20px" class="three-dots-menu">
+            <section>
+                <img src="assets/week-2-descriptive-image.jpg" alt="Week 2 descriptive" width="800" height="534" id="img1-0">
+            </section>
             <h1>
                 Trackgenix
             </h1>
@@ -128,7 +131,7 @@
                         </p>
                     </article>
                 </section>
-                <section>
+                <section class="green-box-container">
                     <article class="green-box">
                         <p>
                             Hour log
@@ -181,15 +184,15 @@
                     <input type="text" id="name" name="name" placeholder="Enter your name">
                     <label for="email">Email:</label>
                     <input type="text" id="email" name="email" placeholder="Enter your email">
-                    <p>
-                        Contact area
-                    </p>
-                    <input type="radio" id="human-resources" name="contact area" value="Human resources">
-                    <label for="human-resources">Human resources</label>
-                    <input type="radio" id="systems" name="contact area" value="Systems">
-                    <label for="systems">Systems</label>
-                    <input type="radio" id="marketing" name="contact area" value="Marketing">
-                    <label for="marketing">Marketing</label><br>
+                    <label for="human-resources">Contact area</label>
+                    <section class="radio-form">
+                        <input type="radio" id="human-resources" name="contact area" value="Human resources">
+                        <label for="human-resources">Human resources</label>
+                        <input type="radio" id="systems" name="contact area" value="Systems">
+                        <label for="systems">Systems</label>
+                        <input type="radio" id="marketing" name="contact area" value="Marketing">
+                        <label for="marketing">Marketing</label>
+                    </section>
                     <label for="text-area">Message</label>
                     <textarea id="text-area" name="text-area" rows="3" cols="60">Enter your message...</textarea>
                     <input type="submit" value="Request Information">
@@ -232,11 +235,13 @@
             </section>
         </main>
         <footer>
-            <img src="assets/LinkedIn.png" alt="LinkedIn icon" width="45" height="45" class="footer-img">
-            <img src="assets/Instagram.png" alt="Instagram icon" width="45" height="45" class="footer-img">
-            <img src="assets/Facebook.png" alt="Facebook icon" width="45" height="45" class="footer-img">
-            <img src="assets/Twitter.png" alt="Twitter icon" width="45" height="45" class="footer-img">
-            <p class="copy">
+            <section>
+                <img src="assets/LinkedIn.png" alt="LinkedIn icon" width="45" height="45" class="footer-img">
+                <img src="assets/Instagram.png" alt="Instagram icon" width="45" height="45" class="footer-img">
+                <img src="assets/Facebook.png" alt="Facebook icon" width="45" height="45" class="footer-img">
+                <img src="assets/Twitter.png" alt="Twitter icon" width="45" height="45" class="footer-img">
+            </section>
+            <p>
                 Copyright © 2022 GigaTech Software Solutions. All rights reserved
             </p>
         </footer>
