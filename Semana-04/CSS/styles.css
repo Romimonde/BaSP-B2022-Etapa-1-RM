@@ -1,7 +1,3 @@
-/* Esto no se hace */
-html {
-    height: 100%;
-}
-body, header, main, aside, footer {
+body {
     display: flex;
 }

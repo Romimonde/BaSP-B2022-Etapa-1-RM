@@ -26,9 +26,7 @@ ul li a img {
     line-height: 30px;
 }
 .contact {
-    display: inline-block;
-    bottom: 0px;
-    margin-bottom: 190px;
+    justify-content: flex-end;
     color: #FFFFFF;
 }
 .contact p {
@@ -42,6 +40,5 @@ ul li a img {
     aside {
         display: flex;
         flex-direction: column;
-        height: 100vh;
     }
 }
