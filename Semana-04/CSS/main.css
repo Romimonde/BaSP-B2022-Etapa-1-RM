@@ -278,18 +278,20 @@ h3 {
         height: 130px;
     }
 }
-    @media screen and (min-width: 1024px) {
-        .contact2 {
-            display: none;
-        }
-        .green-box-container {
-            justify-content: center;
-        }
-        .green-box {
-            margin: 15px;
-            width: 150px;
-            height: 150px;
-            padding-top: 50px;
-        }
-        
+@media screen and (min-width: 1024px) {
+    .contact2 {
+        display: none;
     }
+    .green-box-container {
+        justify-content: center;
+    }
+    .green-box {
+        margin: 15px;
+        width: 150px;
+        height: 150px;
+        padding-top: 50px;
+    }
+    .main-content {
+        width: 80%;
+    }
+}

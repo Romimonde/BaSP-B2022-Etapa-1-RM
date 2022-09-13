@@ -1,6 +1,7 @@
+/* Esto no se hace */
+html {
+    height: 100%;
+}
 body, header, main, aside, footer {
     display: flex;
-}
-body {
-    flex-direction: column;
 }

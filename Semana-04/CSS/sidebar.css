@@ -1,8 +1,6 @@
 aside {
     display: none;
     width: 20%;
-    height: 100%;
-    top: 0;
     background-color: #707070;
     font-family: roboto, sans-serif;
 }
@@ -39,4 +37,11 @@ ul li a img {
 }
 .contact img {
     margin-left: 15px;
+}
+@media screen and (min-width: 1024px) {
+    aside {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
 }
