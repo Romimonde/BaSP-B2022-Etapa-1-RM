@@ -11,16 +11,11 @@ ul li a img {
     left: -30px;
 }
 .search {
-    top: 30px;
-    left: 30px;
-    padding: 5px;
     border-radius: 5px;
     border-style: solid;
     border-color: #707070;
 }
 .nav-bar-1 {
-    left: 50px;
-    top: 50px;
     font-family: roboto, sans-serif;
     font-size: 15px;
     line-height: 30px;
@@ -29,9 +24,9 @@ ul li a img {
     justify-content: flex-end;
     color: #FFFFFF;
 }
-.contact p {
+.contact-us {
     padding: 15px;
-    text-align: left
+    text-align: left;
 }
 .contact img {
     margin-left: 15px;
@@ -40,5 +35,44 @@ ul li a img {
     aside {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+    }
+    .nav-bar-1 {
+        align-self: center;
+        margin-top: 30px;
+    }
+    .contact1 {
+        display: flex;
+        flex-direction: column;
+        font-family: roboto;
+        width: 90%;
+        margin: 5% 5% 50% 5%;
+    }
+    .contact-us1 {
+        display: block;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px;
+        font-size: 20px;
+        color: white;
+    }
+    .mail-section1 {
+        display: flex;
+        padding: 10px 0px;
+    }
+    .adress-section1 {
+        display: flex;
+        padding: 10px 0px;
+        color: white;
+    }
+    .contact-img1 {
+        padding-right: 10px;
+    }
+    .nav-bar-box {
+        display: flex;
+    }
+    .nav-bar-icons {
+        flex-direction: column;
+        width: 20%;
     }
 }

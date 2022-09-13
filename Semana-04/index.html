@@ -20,32 +20,47 @@
     </head>
     <body>
         <aside>
-            <input type="search" placeholder="Search..." class="search">
             <nav class="nav-bar-1">
-                <ul>
-                    <li><a href="#home">Homepage <img src="assets/HomeIcon.png" alt="Home icon" width="20" height="20"></a></li>
-                    <li><a href="#signin">Sign In <img src="assets/PersonIcon.png" alt="Person icon" width="20" height="20"></a></li>
-                    <li><a href="#login">Login <img src="assets/2PersonIcon.png" alt="2 Person icon" width="25" height="20"></a></li>
-                </ul>
-                <button onclick="myFunction()">Submenu</button>
-                <ul>
-                    <li><a href="Placerholder">Placeholder</a></li>
-                    <li><a href="Placerholder">Placeholder</a></li>
-                    <li><a href="Placerholder">Placeholder</a></li>
-                </ul>
+                <section>
+                    <input type="search" placeholder="Search..." class="search">
+                </section>
+                <section class="nav-bar-box">
+                    <section class="nav-bar-icons">
+                            <a href="#home"><img src="assets/HomeIcon.png" alt="Home icon" width="20" height="20"></a>
+                            <a href="#singin"><img src="assets/PersonIcon.png" alt="Person icon" width="20" height="20"></a>
+                            <a href="#login"><img src="assets/2PersonIcon.png" alt="2 Person icon" width="25" height="20"></a>
+                    </section>
+                        <ul>
+                            <li><a href="#home">Homepage</a></li>
+                            <li><a href="#signin">Sign In</a></li>
+                            <li><a href="#login">Login </a></li>
+                        </ul>
+                </section>
+                <section>
+                    <button onclick="myFunction()">Submenu</button>
+                    <ul>
+                        <li><a href="Placerholder">Placeholder</a></li>
+                        <li><a href="Placerholder">Placeholder</a></li>
+                        <li><a href="Placerholder">Placeholder</a></li>
+                    </ul>
+                </section>
             </nav>
-            <section class="contact">
-                <p>
+            <section class="contact1">
+                <p class="contact-us1">
                     Contact us
                 </p>
-                <img src="assets/MailIcon.png" alt="Mail icon" width="25" height="20">
+                <section class="mail-section1">
+                <img src="assets/MailIcon.png" alt="Mail icon" width="25" height="20" class="contact-img1">
                 <a
                     href="mailto:">sampletext@gmail.com
                 </a>
+                </section>
+                <section class="adress-section1">
+                <img src="assets/BuildingIcon.png" alt="Building icon" width="25" height="20" class="contact-img1">
                 <p class="adress">
                     Av. 18 de Julio 5555, Montevideo, Uruguay
                 </p>
-                <img src="assets/BuildingIcon.png" alt="Building icon" width="25" height="20">
+                </section>
             </section>
         </aside>
         <div class="main-content">
@@ -178,7 +193,7 @@
                         of 2022 in the Trackathon Awards for companies in the field of Logistics.
                     </p>
                 </section>
-                <section>
+                <section class="form-section">
                     <p class="form-title">
                         Request System Information
                     </p>
@@ -200,57 +215,57 @@
                         <textarea id="text-area" name="text-area" rows="3" cols="60">Enter your message...</textarea>
                         <input type="submit" value="Request Information">
                     </form>
-                    <ul class="lists">
-                        <section>
-                            <h4>
-                                Our product
-                            </h4>
-                            <ol>
-                                <li><a href="#Features">Features</a></li>
-                                <li><a href="Downloads">Downloads</a></li>
-                                <li><a href="Migrations">Migrations</a></li>
-                                <li><a href="Extras">Extras</a></li>
-                            </ol>
-                        </section>
-                        <section>
-                            <h4>
-                                Company
-                            </h4>
-                            <ol>
-                                <li><a href="About us">About us</a></li>
-                                <li><a href="Customers">Customers</a></li>
-                                <li><a href="Resources">Resources</a></li>
-                                <li><a href="Blog">Blog</a></li>
-                            </ol>
-                        </section>
-                        <section>
-                            <h4>
-                                Support
-                            </h4>
-                            <ol>
-                                <li><a href="Help">Help</a></li>
-                                <li><a href="Turorials">Tutorials</a></li>
-                                <li><a href="API">API</a></li>
-                                <li><a href="Contact">Contact</a></li>
-                            </ol>
-                        </section>
-                    </ul>
-                    <section class="contact2">
-                        <p class="contact-us">
-                            Contact us
+                </section>
+                <ul class="lists">
+                    <section>
+                        <h4>
+                            Our product
+                        </h4>
+                        <ol>
+                            <li><a href="#Features">Features</a></li>
+                            <li><a href="Downloads">Downloads</a></li>
+                            <li><a href="Migrations">Migrations</a></li>
+                            <li><a href="Extras">Extras</a></li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h4>
+                            Company
+                        </h4>
+                        <ol>
+                            <li><a href="About us">About us</a></li>
+                            <li><a href="Customers">Customers</a></li>
+                            <li><a href="Resources">Resources</a></li>
+                            <li><a href="Blog">Blog</a></li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h4>
+                            Support
+                        </h4>
+                        <ol>
+                            <li><a href="Help">Help</a></li>
+                            <li><a href="Turorials">Tutorials</a></li>
+                            <li><a href="API">API</a></li>
+                            <li><a href="Contact">Contact</a></li>
+                        </ol>
+                    </section>
+                </ul>
+                <section class="contact2">
+                    <p class="contact-us2">
+                        Contact us
+                    </p>
+                    <section class="mail-section2">
+                        <img src="assets/MailIcon.png" alt="Mail icon" width="25" height="20" class="contact-img2">
+                        <a
+                            href="mailto:">sampletext@gmail.com
+                        </a>
+                    </section>
+                    <section class="adress-section2">
+                        <img src="assets/BuildingIcon.png" alt="Building icon" width="25" height="20" class="contact-img2">
+                        <p>
+                            Av. 18 de Julio 5555, Montevideo, Uruguay
                         </p>
-                        <section class="mail-section">
-                            <img src="assets/MailIcon.png" alt="Mail icon" width="25" height="20" class="contact-img">
-                            <a
-                                href="mailto:">sampletext@gmail.com
-                            </a>
-                        </section>
-                        <section class="adress-section">
-                            <img src="assets/BuildingIcon.png" alt="Building icon" width="25" height="20" class="contact-img">
-                            <p>
-                                Av. 18 de Julio 5555, Montevideo, Uruguay
-                            </p>
-                        </section>
                     </section>
                 </section>
             </main>
