@@ -47,4 +47,7 @@ We started creating the html structure of the landing page on VSCode. Trying to 
 We started the styling of the landing page using css, trying it is a pixel perfect representation.
 To approach this, we had to made some changes on the html structure.
 
+## Semana 4
+We made the landing page responsive, using the logic of mobile first.
+
 ### Author: Radium Rocket BaSP Group B
