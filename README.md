@@ -50,4 +50,7 @@ To approach this, we had to made some changes on the html structure.
 ## Semana 4
 We made the landing page responsive, using the logic of mobile first.
 
+## Semana 5
+We start doing some JavaScript excercises to learn how it works before we applied it to the website.
+
 ### Author: Radium Rocket BaSP Group B
