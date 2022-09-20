@@ -37,6 +37,9 @@ input[type=submit] {
 input [type=radio] {
     margin: 0;
 }
+ol a:link, a:visited, a:active {
+    color: black;
+}
 .background {
     width: 100%;
     background-color:#373867
@@ -266,8 +269,8 @@ input [type=radio] {
     }
     .green-box {
         margin: 5%;
-        width: 130px;
-        height: 130px;
+        width: 150px;
+        height: 150px;
     }
     .icons-small {
         margin: 15px;
@@ -300,8 +303,8 @@ input [type=radio] {
     }
     .green-box {
         margin: 15px;
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
         padding-top: 50px;
     }
     .main-content {
