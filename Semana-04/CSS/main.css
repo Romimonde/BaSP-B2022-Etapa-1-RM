@@ -37,7 +37,7 @@ input[type=submit] {
 input [type=radio] {
     margin: 0;
 }
-ol a:link, a:visited, a:active {
+ol a:link, ol a:visited, ol a:active {
     color: black;
 }
 .background {
