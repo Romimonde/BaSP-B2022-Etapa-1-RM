@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="styles/login.css">
+    <link rel = "stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/header.css">
     <title>Login Trackgenix</title>
 </head>
 <body>
@@ -14,12 +15,27 @@
         </h1>
     </header>
     <main>
-        <fieldset>
-            <img src="../assets/login.png">
-        </fieldset>
-        <form>
-
-        </form>
+        <section class="image-section">
+            <img src="../assets/login.png" alt="login image" width="100%" height="100%">
+        </section>
+        <section class="login-form-section">
+            <p class="form-title">
+                Login
+            </p>
+            <form>
+                <input type="text" id="email" name="email" placeholder="Enter your email">
+                <input type="text" id="password" name="password" placeholder="Enter your password">
+                <label for="remember-me">Remember me</label>
+                <input type="checkbox" id="remeber-me" name="remember-me" value="remember-me">
+                <a href="#password-recover">Forgot password?</a>
+                <input type="submit" value="Login">
+                <input type="submit" value="Continue with Google">
+                <input type="submit" value="Continue with LinkedIn">
+                <p>
+                    New to Trackgenix? <a href="../views/sign-up.html">Sign up now</a>
+                </p>
+            </form>
+        </section>
     </main>
 </body>
 </html>

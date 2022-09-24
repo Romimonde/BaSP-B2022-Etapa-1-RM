@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+}
+form {
+    height: 100%;
+    width: 100%;
+}
+
+main section img {
+    width: 100%;
+}
+
+.sign-up-form-section {
+    width: 30%;
+}
+
+.image-section {
+    display: none;
+    width: 70%;
+}
+
+@media screen and (min-width: 480px) {
+    .image-section {
+        display: block;
+    }
+}

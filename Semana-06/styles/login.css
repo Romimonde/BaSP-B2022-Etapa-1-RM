@@ -1,0 +1,27 @@
+main {
+    display: flex;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+}
+
+/* POR QUE TIENE MARGIN EL BODY? */
+body {
+    margin: 0px;
+}
+
+.image-section {
+    display: none;
+}
+
+.login-form-section {
+    background-color: lightgray;
+}
+
+@media screen and (min-width: 480px) {
+    .image-section {
+        display: block;
+    }
+}
