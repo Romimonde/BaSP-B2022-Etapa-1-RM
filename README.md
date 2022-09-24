@@ -53,4 +53,11 @@ We made the landing page responsive, using the logic of mobile first.
 ## Semana 5
 We start doing some JavaScript excercises to learn how it works before we applied it to the website.
 
+## Semana 6
+We added the login and sign up functionalities to the landing page.
+
+First, we made the html structure of the login and sign up pages and linked them to the landing page.
+Then, we gave style to the pages and form.
+Finally, we added the functionalities, alerts and validations with javascript.
+
 ### Author: Radium Rocket BaSP Group B
