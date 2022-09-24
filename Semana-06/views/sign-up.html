@@ -19,17 +19,21 @@
             <img src="../assets/signup.jpg" alt="sign up image">
         </section>
         <section class="sign-up-form-section">
-            <p class="form-title">
-                Sign up
-            </p>
             <form>
-                <input type="text" id="name" name="name" placeholder="First name">
-                <input type="text" id="last-name" name="last-name" placeholder="Last name">
+                <p class="form-title">
+                    Sign up
+                </p>
+                <section>
+                    <input type="text" id="name" name="name" placeholder="First name">
+                    <input type="text" id="last-name" name="last-name" placeholder="Last name">
+                </section>
                 <input type="text" id="email" name="email" placeholder="Email">
                 <input type="text" id="password" name="password" placeholder="Password">
-                <input type="checkbox" id="terms" name="terms" value="Agree">
-                <label for="terms">I agree to the terms and conditions</label>
-                <input type="submit" value="Sign up">
+                <section class="checkbox">
+                    <input type="checkbox" id="terms" name="terms" value="Agree">
+                    <label for="terms">I agree to the terms and conditions.</label>
+                </section>
+                <input type="submit" value="Sign up" class="sign-up-button">
                 <p>
                     Already have an account? <a href="../views/login.html">Login</a>
                 </p>

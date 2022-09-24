@@ -19,18 +19,22 @@
             <img src="../assets/login.png" alt="login image" width="100%" height="100%">
         </section>
         <section class="login-form-section">
-            <p class="form-title">
-                Login
-            </p>
             <form>
-                <input type="text" id="email" name="email" placeholder="Enter your email">
-                <input type="text" id="password" name="password" placeholder="Enter your password">
-                <label for="remember-me">Remember me</label>
-                <input type="checkbox" id="remeber-me" name="remember-me" value="remember-me">
-                <a href="#password-recover">Forgot password?</a>
-                <input type="submit" value="Login">
-                <input type="submit" value="Continue with Google">
-                <input type="submit" value="Continue with LinkedIn">
+                <p class="form-title">
+                    Login
+                </p>
+                <input type="text" id="email" name="email" placeholder="Email">
+                <input type="text" id="password" name="password" placeholder="Password">
+                <section class="checkbox">
+                    <section>
+                        <input type="checkbox" id="remeber-me" name="remember-me" value="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </section>
+                    <a href="#password-recover">Forgot password?</a>
+                </section>
+                <input type="submit" value="Login" class="login">
+                <input type="submit" value="Continue with Google" class="continue-with">
+                <input type="submit" value="Continue with LinkedIn" class="continue-with">
                 <p>
                     New to Trackgenix? <a href="../views/sign-up.html">Sign up now</a>
                 </p>

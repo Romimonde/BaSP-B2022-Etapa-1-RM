@@ -4,8 +4,12 @@ body {
 
 main {
     display: flex;
+    justify-content: center;
+    font-family: roboto, sans-serif;
 }
 form {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
 }
@@ -14,17 +18,37 @@ main section img {
     width: 100%;
 }
 
+form input {
+    margin: 15px 0px;
+    height: 40px;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 .sign-up-form-section {
-    width: 30%;
+    display: flex;
+    align-items: center;
 }
 
 .image-section {
     display: none;
-    width: 70%;
+}
+
+.sign-up-button {
+    width: 100%;
+    height: 60px;
+    background-color: #373867;
+    border-radius: 8px;
+    border-style: none;
+    color: white;
+    font-size: 16px;
 }
 
 @media screen and (min-width: 480px) {
     .image-section {
         display: block;
+        width: 50%;
+        margin-right: 50px;
     }
 }
