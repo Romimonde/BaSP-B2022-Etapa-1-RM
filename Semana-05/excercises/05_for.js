@@ -6,18 +6,18 @@ console.log("Exercise 05 a.");
 
 var days = ["monday", "tuesday", "wednesday", "thursday", "friday"]
 
-days.forEach(function (elemento, indice, array){
-    alert(elemento)
+days.for = function (elemento, indice, array){
+//    alert(elemento)
     console.log(elemento, indice);
-})
+}
 
 console.log("Exercise 05 b.");
 /* b. Al array anterior convertir la primera letra de cada palabra en mayúscula y mostrar una alerta por cada palabra modificada. */
 
 for (var i = 0; i < days.length; i++) {
     days[i] = days[i][0].toUpperCase() + days[i].substring(1);
+//    alert(days[i]);
 }
-console.log(days);
 
 console.log("Exercise 05 c.");
 /* c. Crear una variable llamada “sentence” que tenga un string vacío, luego al array del punto a) recorrerlo con un bucle for para
@@ -26,8 +26,8 @@ ir guardando cada palabra dentro de la variable sentence. Al final mostrar una �
 var sentence = "";
 for (var i = 0; i < days.length; i++) {
     sentence = sentence+" "+days[i]
+//    alert(sentence)
 }
-alert (sentence)
 
 console.log("Exercise 05 d.");
 /* d. Crear una array vacío y con un bucle for de 10 repeticiones. Llenar el array con el número de la repetición, es decir que al final
@@ -37,5 +37,5 @@ navegador el array final (utilizar console.log). */
 var empty = []
 for (var i = 0; i < 10; i++) {
     empty[i] = i;
+    console.log(empty);
 }
-console.log(empty);

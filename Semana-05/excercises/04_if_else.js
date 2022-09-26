@@ -14,7 +14,7 @@ if (randomNumber > 0.5) {
      alert ("Lower than 0,5");
 }
 
-console.log("Exercise 03 b.");
+console.log("Exercise 04 b.");
 /* b. Crear una variable “Age” que contenga un número entero entre 0 y 100 y muestre los siguientes mensajes de alerta:*/
 
 var min = 0;
@@ -24,42 +24,42 @@ console.log(Age);
 
 /* b. i. “Bebe” si la edad es menor a 2 años. */
 
-if (Age < 2) {
-    alert ("Bebe");
+if (Age <= 2) {
+    alert("Bebe");
 }
 
 /* b. ii. “Niño” si la edad es entre 2 y 12 años. */
 
-else if ((Age > 2) && (Age < 12)){
-    alert ("Niño");
+else if ((Age > 2) && (Age <= 12)){
+    alert("Niño");
 }
 
 /* b. iii. “Adolescente” entre 13 y 19 años. */
 
-else if ((Age > 13) && (Age < 19)){
-    alert ("Adolescente");
+else if ((Age >= 13) && (Age <= 19)){
+    alert("Adolescente");
 }
 
 /* b. iv. “Joven” entre 20 y 30 años. */
 
-else if ((Age > 20) && (Age < 30)){
-    alert ("Joven");
+else if ((Age >= 20) && (Age <= 30)){
+    alert("Joven");
 }
 
 /* b. v. “Adulto” entre 31 y 60 años. */
 
-else if ((Age > 31) && (Age < 60)){
-    alert ("Adulto");
+else if ((Age >= 31) && (Age <= 60)){
+    alert("Adulto");
 }
 
 /* b. vi. “Adulto mayor” entre 61 y 75 años. */
 
-else if ((Age > 61) && (Age < 75)){
-    alert ("Adulto mayor");
+else if ((Age >= 61) && (Age <= 75)){
+    alert("Adulto mayor");
 }
 
 /* b. vii. “Anciano” si es mayor a 75 años. */
 
 else {
-    alert ("Anciano");
+    alert("Anciano");
 }

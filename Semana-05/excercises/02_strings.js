@@ -14,7 +14,7 @@ console.log("Exercise 02 b");
 con los primeros 5 caracteres guardando el resultado en una nueva variable (utilizar substring). */
 
 var string_2 = "This is another but not very long, string";
-var subs_1 = string_2.substring (0,5);
+var subs_1 = string_2.substring(0,5);
 console.log(subs_1);
 
 console.log("Exercise 02 c");
@@ -51,7 +51,6 @@ la primera letra de ambas palabras en mayúscula y las demás letras en minúscu
 (utilizar indexOf, substring, toUpperCase, toLowerCase y el operador +). */
 
 var string_6 = "strawberry friendship";
-var index_02 = string_6.indexOf(" ")+1;
 var subs_5 = string_6.substring(0,1).toUpperCase();
 var subs_6 = string_6.substring(11,12).toUpperCase();
 var subs_7 = string_6.substring(1,11);

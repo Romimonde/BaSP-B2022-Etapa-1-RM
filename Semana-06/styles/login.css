@@ -20,7 +20,7 @@ form {
     display: none;
 }
 
-.login-form-section {
+#login-form-section {
     display: flex;
     justify-content: space-around;
     width: 100%;
