@@ -10,7 +10,7 @@ var password = document.getElementById("password");
 var login = document.getElementById("login");
 const myP = document.createElement("p");
 myP.innerHTML = "  ";
-myP.classList.add("validations");
+myP.classList.add("red-style");
 myP.setAttribute('id', 'myMessage');
 var myformlogin = document.getElementById("login-form");
 myformlogin.appendChild(myP);

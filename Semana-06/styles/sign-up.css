@@ -45,6 +45,18 @@ form input {
     font-size: 16px;
 }
 
+.red-style {
+    font-family: roboto, sans-serif;
+    color: red;
+    font-size: 12px;
+}
+
+.green-style {
+    font-family: roboto, sans-serif;
+    color: green;
+    font-size: 12px;
+}
+
 @media screen and (min-width: 480px) {
     .image-section {
         display: block;
