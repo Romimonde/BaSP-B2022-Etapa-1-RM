@@ -8,7 +8,7 @@ window.onload = function() {
 var email = document.getElementById("email");
 var password = document.getElementById("password");
 var login = document.getElementById("login");
-const myP = document.createElement("p");
+var myP = document.createElement("p");
 myP.innerHTML = "  ";
 myP.classList.add("red-style");
 myP.setAttribute('id', 'myMessage');
@@ -38,32 +38,41 @@ function quantityNumbers(userInput) {
     return q;
 }
 
+function showMyRedMessage(theMessage) {
+    myP = document.getElementById("myMessage");
+    myP.className="red-style";
+    myP.textContent = theMessage;
+}
+
 /*VALIDATIONS*/
 
 email.onblur = function() {
     var regexEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     if (regexEmail.test(email.value)!=true) {
-        alert("Invalid format email");
+        email.className="red-border";
+        showMyRedMessage("Invalid Email");
     }
     else {
-        alert("Valid email");
+        email.className="form-input";
     }
 }
 
 password.onblur = function() {
     if ((quantityLetters(password.value)>7) && (quantityNumbers(password.value)>0)) {
+        password.className="form-input";
     }
     else {
-        alert("Invalid Password" + password.value);
+        password.className="red-border";
+        showMyRedMessage("Invalid Password");
     }
-    return true;
 }
 
 function validLogin (typedEmail, typedPassword) {
     if (typedEmail=="rose@radiumrocket.com" && typedPassword=="BaSP2022") {
-        return "Correct login";
-    } else {
-    return "Incorrect User or Password ";
+        alert("Succesfull Login. Email:"+typedEmail+"Password"+typedPassword);
+    }
+    else {
+        showMyRedMessage("Email or Password incorrect");
     }
 }
 
@@ -71,26 +80,11 @@ login.onclick = function(e) {
     e.preventDefault();
 }
 
-login.onclick = function () {
-//      alert(validLogin(email.value, password.value));
-}
-}
+var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login';
 
-
-
-
-
-/*FETCH LOGIN*/
-//response.json ES UNA PROMESA
-
-//var urlLogin = 'https://basp-m2022-api-rest-server.herokuapp.com/login'; /*AGREGAR LAS QUERYS?*/
-
-/*  fetch(urlLogin).then(function (response) {
+fetch(url)
+    .then(function (response) {
         return response.json()
     })
-    .then (function(data) {
-    console.log(data)
-    })
-    .catch (function(error) {
-    console.log(error)*/
 
+}

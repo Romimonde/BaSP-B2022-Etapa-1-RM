@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    font-family: roboto, sans-serif;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+main section img {
+    width: 100%;
+}
+
+header h1 a {
+    color: white;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+
+.form-input {
+    margin: 15px 0px;
+    height: 40px;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.form-mobile-number {
+    margin: 15px 0px;
+    height: 40px;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.sign-up-form-section {
+    display: flex;
+    align-items: center;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-label {
+    font-size: 9px;
+}
+
+.image-section {
+    display: none;
+}
+
+.sign-up-button {
+    width: 100%;
+    height: 60px;
+    background-color: #373867;
+    border-radius: 8px;
+    border-style: none;
+    color: white;
+    font-size: 16px;
+}
+
+.red-style {
+    font-family: roboto, sans-serif;
+    color: red;
+    font-size: 12px;
+}
+
+.red-border {
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    width: 45%;
+    margin:10px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.red-border-mobile-number {
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    margin:10px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 480px) {
+    .image-section {
+        display: block;
+        width: 50%;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .image-section {
+        display: block;
+        width: 30%;
+    }
+    .sign-up-form-section {
+        display: flex;
+        width: 50%;
+        margin-right: 50px;
+        box-sizing: border-box;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .sign-up-form {
+        display: flex;
+        width: 70%;
+    }
+
+    .input-section {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .form-input {
+        width: 45%;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .form-mobile-number {
+        margin: 15px 15px;
+        width: 95%;
+        height: 40px;
+        border-radius: 10px;
+        border-style: none;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+}
