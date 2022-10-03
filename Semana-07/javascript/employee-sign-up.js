@@ -82,6 +82,7 @@ function showMyRedMessage(theMessage) {
     myP.className="red-style";
     myP.textContent = theMessage;
 }
+
 function isValidName(data) {
     if ((data.length>3) && (hasCapitalLetter(data)) && (hasNumber(data)!=true)) {
         return true;
@@ -90,12 +91,89 @@ function isValidName(data) {
         return false;
     }
 }
-function isValidLastname(data) {
+function isValidLastName(data) {
     if ((data.length>3) && (hasCapitalLetter(data)) && (hasNumber(data)!=true)) {
         return true;
     }
     else {
         return false;
+    }
+}
+
+function isValidDni(data) {
+    if ((data.length>7) &&! (hasCapitalLetter(data)) &&! (hasLowerLetter(data)) 
+    && (hasNumber(data))) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function isValidMobileNumber(data) {
+    if ((data.length==10) &&! (hasCapitalLetter(data)) &&! (hasLowerLetter(data))
+    && (hasNumber(data))) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function isValidAddress(data) {
+    var x = data.split(" ");
+    if ((hasNumber(data)) && (quantityLetters(data)>5) && x.length>1) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function isValidLocation(data) {
+    if ((quantityLetters(data)>3) &&! (hasEspecialChar(data))) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function isValidPostalCode(data) {
+    if (((quantityNumbers(data) == 4) || (quantityNumbers(data)== 5)) &&
+    (quantityLetters(data)==0)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function isValidEmail(data) {
+    var regexEmail = '/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/';
+    if (regexEmail.test(data)=!true) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function isValidPassword(data) {
+    if ((quantityLetters(data)>0) && (quantityNumbers(data)>0) && (data.lenght>7)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function isValidRepeatPassword(data) {
+    if (password.value != repeatPassword.value) {
+        return false;
+    }
+    else {
+        return true;
     }
 }
 
@@ -115,7 +193,7 @@ name.onfocus= function() {
 
 
 lastName.onblur = function() {
-    if (isValidLastname(lastName.value)) {
+    if (isValidLastName(lastName.value)) {
         lastName.className="form-input";
     }
     else {
@@ -129,7 +207,7 @@ lastName.onfocus= function() {
 }
 
 dni.onblur = function() {
-    if ((dni.value.length>7) &&! (hasCapitalLetter(dni.value)) &&! (hasLowerLetter(dni.value)) && (hasNumber(dni.value))) {
+    if (isValidDni(dni.value)) {
         dni.className="form-input";
     }
     else {
@@ -143,7 +221,7 @@ dni.onfocus= function() {
 }
 
 mobileNumber.onblur = function() {
-    if ((mobileNumber.value.length==10) &&! (hasCapitalLetter(mobileNumber.value)) &&! (hasLowerLetter(mobileNumber.value)) && (hasNumber(mobileNumber.value))) {
+    if (isValidMobileNumber(mobileNumber.value)) {
         mobileNumber.className="form-input";
     }
     else {
@@ -157,8 +235,7 @@ mobileNumber.onfocus= function() {
 }
 
 address.onblur = function() {
-    var x = address.value.split(" ");
-    if ((hasNumber(address.value)) && (quantityLetters(address.value)>5) && x.length>1) {
+    if (isValidAddress(address.value)) {
         address.className="form-input";
     }
     else {
@@ -172,7 +249,7 @@ address.onfocus= function() {
 }
 
 location.onblur = function() {
-    if ((quantityLetters(location.value)>3) &&! (hasEspecialChar(location.value))) {
+    if (isValidLocation(location.value)) {
         location.className="form-input";
     }
     else {
@@ -186,9 +263,8 @@ location.onfocus= function() {
 }
 
 postalCode.onblur = function() {
-    if (((quantityNumbers(postalCode.value) == 4) || (quantityNumbers(postalCode.value)== 5)) &&
-        (quantityLetters(postalCode.value)==0)) {
-            postalCode.className="form-input";
+    if (isValidPostalCode(postalCode.value)) {
+        postalCode.className="form-input";
     }
     else {
         postalCode.className="red-border";
@@ -201,8 +277,7 @@ postalCode.onfocus= function() {
 }
 
 email.onblur = function() {
-    var regexEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    if (regexEmail.test(email.value)!=true) {
+    if (isValidEmail(email.value)) {
         email.className="form-input";
     }
     else {
@@ -212,7 +287,7 @@ email.onblur = function() {
 }
 
 password.onblur = function() {
-    if ((quantityLetters(password.value)>8) && (quantityNumbers(password.value)>0)) {
+    if (isValidPassword(password.value)) {
         password.className="form-input";
     }
     else {
@@ -222,7 +297,7 @@ password.onblur = function() {
 }
 
 repeatPassword.onblur = function() {
-    if (password.value != repeatPassword.value) {
+    if (isValidRepeatPassword(repeatPassword.value)) {
         repeatPassword.className="red-border";
         showMyRedMessage('Invalid Password')
     }
@@ -238,7 +313,7 @@ signUpButton.onclick = function(e){
 
     var signUpArray = [];
     var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?';
-     if (isValidName(name.value) && isValidLastname(lastName.value)) {
+     if (isValidName(name.value) && isValidLastName(lastName.value)) {
         // agregar al if validaciones de input text, previo convertir a funciones las validaciones
          signUpArray.push('name=' + name.value);
          signUpArray.push('&lastName=' + lastName.value);
@@ -282,7 +357,7 @@ signUpButton.onclick = function(e){
              })
     }
     else {
-        alert("Please check YOUR DATA");
+        alert("Please check the information");
     }
 }
 }
