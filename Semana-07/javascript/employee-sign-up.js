@@ -12,7 +12,7 @@ window.onload = function() {
     var password = document.getElementById("password");
     var repeatPassword = document.getElementById("repeat-password");
     var mysignup = document.getElementById("sign-up-form");
- //   var mysignup = document.getElementById("");
+    var signUpButton = document.getElementById("sign-up")
     var myP = document.createElement("p");
     myP.innerHTML = " ";
     myP.setAttribute("id", "myMessage");
@@ -82,16 +82,26 @@ function showMyRedMessage(theMessage) {
     myP.className="red-style";
     myP.textContent = theMessage;
 }
-
-
-// function clearMyMessage(){
-//      myP = document.getElementById("myMessage");
-//      showMyRedMessage =(' ');
-// }
+function isValidName(data) {
+    if ((data.length>3) && (hasCapitalLetter(data)) && (hasNumber(data)!=true)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+function isValidLastname(data) {
+    if ((data.length>3) && (hasCapitalLetter(data)) && (hasNumber(data)!=true)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 
 /*VALIDATIONS*/
 name.onblur = function() {
-    if ((name.value.length>3) && (hasCapitalLetter(name.value)) && (hasNumber(name.value)!=true)) {
+    if ( isValidName(name.value)) {
         name.className="form-input";
     }
     else {
@@ -103,20 +113,9 @@ name.onblur = function() {
 name.onfocus= function() {
 }
 
-// lastName.onblur = function() {
-//     if (!((lastName.value.length>3) && (hasCapitalLetter(lastName.value)) && (hasNumber(lastName.value)!=true))) {
-//         myP = document.getElementById("myMessage");
-//         myP.className="red-style";
-//         myP.textContent = 'Invalid Lastname';
-//         lastName.className="red-border";
-//         showMyRedMessage('Invalid Lastname2');
-//     }
-//     else {
-//     }
-// }
 
 lastName.onblur = function() {
-    if ((lastName.value.length>3) && (hasCapitalLetter(lastName.value)) && (hasNumber(lastName.value)!=true)) {
+    if (isValidLastname(lastName.value)) {
         lastName.className="form-input";
     }
     else {
@@ -229,6 +228,61 @@ repeatPassword.onblur = function() {
     }
     else{
         repeatPassword.className="form-input";
+    }
+}
+
+signUpButton.onclick = function(e){
+    e.preventDefault();
+    console.log(name.value+isValidName(name.value));
+    console.log(lastName.value+isValidLastname(lastName.value));
+
+    var signUpArray = [];
+    var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?';
+     if (isValidName(name.value) && isValidLastname(lastName.value)) {
+        // agregar al if validaciones de input text, previo convertir a funciones las validaciones
+         signUpArray.push('name=' + name.value);
+         signUpArray.push('&lastName=' + lastName.value);
+         signUpArray.push('&email=' + email.value);
+         signUpArray.push('&dni=' + dni.value);
+         signUpArray.push('&dob=' + birthDate.value);
+         signUpArray.push('&city=' + location.value);
+         signUpArray.push('&address=' + address.value);
+         signUpArray.push('&zip=' + postalCode.value);
+         signUpArray.push('&phone=' + mobileNumber.value);
+
+         for (i=0; i < signUpArray.length; i++){
+            url=url+signUpArray[i];
+         }
+         alert (signUpArray);
+         fetch(url)
+             .then(function(response) {
+                //console.log(response.json());
+                if (response.ok) {
+                    alert("Signup IN PROGRESS");
+                }
+                 if (response.sucess==true) {
+                     alert(response.msg);
+                }
+                return response.json();
+             })
+             .then(function(data) {
+                console.log("en data " + data.sucess);
+                if (data.sucess==true) {
+                    alert(data.msg);
+                }
+                else {
+                    console.log("not data yet");
+                }
+          
+              //  console.log(data.msg);
+             })
+             .catch(function(error) {
+              //  alert(error.msg+"error");
+                console.log(error);
+             })
+    }
+    else {
+        alert("Please check YOUR DATA");
     }
 }
 }

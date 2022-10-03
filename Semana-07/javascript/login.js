@@ -7,13 +7,14 @@ window.onload = function() {
 
 var email = document.getElementById("email");
 var password = document.getElementById("password");
-var login = document.getElementById("login");
+var loginButton = document.getElementById("login");
 var myP = document.createElement("p");
 myP.innerHTML = "  ";
 myP.classList.add("red-style");
 myP.setAttribute('id', 'myMessage');
 var myformlogin = document.getElementById("login-form");
 myformlogin.appendChild(myP);
+
 
 /*FUNCTIONS*/
 function quantityLetters(userInput) {
@@ -43,12 +44,28 @@ function showMyRedMessage(theMessage) {
     myP.className="red-style";
     myP.textContent = theMessage;
 }
+function isValidEmail(data) {
+    var regexEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+    if (regexEmail.test(data)) {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 
+function isValidPassword(data){
+    if ((quantityLetters(data)>3) && (quantityNumbers(data)>0)){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 /*VALIDATIONS*/
 
 email.onblur = function() {
-    var regexEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    if (regexEmail.test(email.value)!=true) {
+    if (isValidEmail(email.value)!=true) {
         email.className="red-border";
         showMyRedMessage("Invalid Email");
     }
@@ -58,7 +75,7 @@ email.onblur = function() {
 }
 
 password.onblur = function() {
-    if ((quantityLetters(password.value)>7) && (quantityNumbers(password.value)>0)) {
+    if ((quantityLetters(password.value)>3) && (quantityNumbers(password.value)>0)) {
         password.className="form-input";
     }
     else {
@@ -67,24 +84,35 @@ password.onblur = function() {
     }
 }
 
-function validLogin (typedEmail, typedPassword) {
-    if (typedEmail=="rose@radiumrocket.com" && typedPassword=="BaSP2022") {
-        alert("Succesfull Login. Email:"+typedEmail+"Password"+typedPassword);
+loginButton.onclick = function(e){
+    e.preventDefault();
+    var loginArray = [];
+    var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?';
+     if (isValidEmail(email.value) && isValidPassword(password.value)) {
+         loginArray.push('email=' + email.value);
+         loginArray.push('&password=' + password.value);
+         fetch(url+loginArray[0]+loginArray[1])
+             .then(function(response) {
+                //console.log(response.json());
+                if (response.ok) {
+                    alert("Login succesfull");
+                }
+                 if (response.sucess==true) {
+                     alert(response.msg);
+                }
+                return response.json();
+             })
+             .then(function(data) {
+               alert(data.msg);
+              //  console.log(data.msg);
+             })
+             .catch(function(error) {
+              //  alert(error.msg+"error");
+                console.log(error);
+             })
     }
     else {
-        showMyRedMessage("Email or Password incorrect");
+        alert("Please check email and password");
     }
 }
-
-login.onclick = function(e) {
-    e.preventDefault();
-}
-
-var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login';
-
-fetch(url)
-    .then(function (response) {
-        return response.json()
-    })
-
 }
