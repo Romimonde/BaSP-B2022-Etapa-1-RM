@@ -55,7 +55,7 @@ function isValidEmail(data) {
 }
 
 function isValidPassword(data){
-    if ((quantityLetters(data)>3) && (quantityNumbers(data)>0)){
+    if ((quantityLetters(data)>0) && (quantityNumbers(data)>0) && (data.length>7)){
         return true;
     }
     else {
@@ -75,7 +75,7 @@ email.onblur = function() {
 }
 
 password.onblur = function() {
-    if ((quantityLetters(password.value)>3) && (quantityNumbers(password.value)>0)) {
+    if ((quantityLetters(password.value)>0) && (quantityNumbers(password.value)>0) && (password.value.length>7)) {
         password.className="form-input";
     }
     else {
@@ -97,7 +97,7 @@ loginButton.onclick = function(e){
                 if (response.ok) {
                     alert("Login succesfull");
                 }
-                 if (response.sucess==true) {
+                 if (response.success==true) {
                      alert(response.msg);
                 }
                 return response.json();

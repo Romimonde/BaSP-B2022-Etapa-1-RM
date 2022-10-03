@@ -154,6 +154,17 @@ function isValidDni(data) {
     }
 }
 
+function isValidBirthDate(data) {
+    var currentDate = new Date();
+    var typedDate = new Date(data);
+    if (currentDate > typedDate) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 function isValidMobileNumber(data) {
     if ((data.length==10) &&! (hasCapitalLetter(data)) &&! (hasLowerLetter(data))
     && (hasNumber(data))) {
@@ -194,17 +205,17 @@ function isValidPostalCode(data) {
 }
 
 function isValidEmail(data) {
-    var regexEmail = '/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/';
-    if (regexEmail.test(data)=!true) {
+    var regexEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+    if (regexEmail.test(data)) {
         return true;
     }
-    else {
+    else{
         return false;
     }
 }
 
 function isValidPassword(data) {
-    if ((quantityLetters(data)>0) && (quantityNumbers(data)>0) && (data.lenght>7)) {
+    if ((quantityLetters(data)>0) && (quantityNumbers(data)>0) && (data.length>7)) {
         return true;
     }
     else {
@@ -212,8 +223,8 @@ function isValidPassword(data) {
     }
 }
 
-function isValidRepeatPassword(data) {
-    if (password.value != repeatPassword.value) {
+function isValidRepeatPassword(data, data2) {
+    if ((data) != (data2)) {
         return false;
     }
     else {
@@ -232,9 +243,8 @@ name.onblur = function() {
     }
 }
 
-name.onfocus= function() {
+name.onfocus = function() {
 }
-
 
 lastName.onblur = function() {
     if (isValidLastName(lastName.value)) {
@@ -246,7 +256,7 @@ lastName.onblur = function() {
     }
 }
 
-lastName.onfocus= function() {
+lastName.onfocus = function() {
     showMyRedMessage(' ');
 }
 
@@ -260,8 +270,18 @@ dni.onblur = function() {
     }
 }
 
-dni.onfocus= function() {
+dni.onfocus = function() {
     showMyRedMessage(' ');
+}
+
+birthDate.onblur = function() {
+    if(isValidBirthDate(birthDate.value)) {
+        birthDate.className="form-input";
+    }
+    else {
+        birthDate.className="red-border";
+        showMyRedMessage('Invalid date')
+    }
 }
 
 mobileNumber.onblur = function() {
@@ -288,7 +308,7 @@ address.onblur = function() {
     }
 }
 
-address.onfocus= function() {
+address.onfocus = function() {
     showMyRedMessage(' ');
 }
 
@@ -302,7 +322,7 @@ location.onblur = function() {
     }
 }
 
-location.onfocus= function() {
+location.onfocus = function() {
     showMyRedMessage(' ');
 }
 
@@ -341,16 +361,15 @@ password.onblur = function() {
 }
 
 password.onfocus = function() {
-
 }
 
 repeatPassword.onblur = function() {
-    if (isValidRepeatPassword(repeatPassword.value)) {
-        repeatPassword.className="red-border";
-        showMyRedMessage('Invalid Password')
+    if (isValidRepeatPassword(password.value, repeatPassword.value)) {
+        repeatPassword.className="form-input";
     }
     else{
-        repeatPassword.className="form-input";
+        repeatPassword.className="red-border";
+        showMyRedMessage('Invalid Password')
     }
 }
 
@@ -361,11 +380,11 @@ repeatPassword.onfocus = function() {
 signUpButton.onclick = function(e){
     e.preventDefault();
     console.log(name.value+isValidName(name.value));
-    console.log(lastName.value+isValidLastname(lastName.value));
+    console.log(lastName.value+isValidLastName(lastName.value));
     var signUpArray = [];
     var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?';
-     if (isValidName(name.value) && isValidLastName(lastName.value)) {
-        // agregar al if validaciones de input text, previo convertir a funciones las validaciones
+     if (isValidName(name.value) && isValidLastName(lastName.value) && isValidEmail(email.value)
+        && isValidDni(dni.value) && is) {
          signUpArray.push('name=' + name.value);
          signUpArray.push('&lastName=' + lastName.value);
          signUpArray.push('&email=' + email.value);
@@ -381,13 +400,12 @@ signUpButton.onclick = function(e){
          alert (signUpArray);
          fetch(url)
              .then(function(response) {
-                //console.log(response.json());
-                if (response.ok) {
-                    alert("Signup IN PROGRESS");
-                }
-                 if (response.sucess==true) {
-                     alert(response.msg);
-                }
+                 if (response.ok) {  //pending promise
+                     alert("Signup IN PROGRESS");
+                 }
+                  if (response.success==true) {
+                      alert(response.msg);
+                 }
                 return response.json();
              })
              .then(function(data) {
