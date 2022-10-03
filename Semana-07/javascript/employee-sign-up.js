@@ -13,10 +13,54 @@ window.onload = function() {
     var repeatPassword = document.getElementById("repeat-password");
     var mysignup = document.getElementById("sign-up-form");
     var signUpButton = document.getElementById("sign-up")
-    var myP = document.createElement("p");
-    myP.innerHTML = " ";
-    myP.setAttribute("id", "myMessage");
-    mysignup.appendChild(myP);
+    // var myP = document.createElement("p");
+    // myP.innerHTML = " ";
+    // myP.setAttribute("id", "myMessage");
+    // mysignup.appendChild(myP);
+    var myPName = document.createElement("p");
+    myPName.innerHTML = "Name";
+    myPName.setAttribute("id", "myMessageName");
+    mysignup.appendChild(myPName);
+    var myPLastName = document.createElement("p");
+    myPLastName.innerHTML = "LastName";
+    myPLastName.setAttribute("id", "myMessageLastName");
+    mysignup.appendChild(myPLastName);
+    var myPDni = document.createElement("p");
+    myPDni.innerHTML = "DNI";
+    myPDni.setAttribute("id", "myMessageDNI");
+    mysignup.appendChild(myPDni);
+    var myPBirthDate = document.createElement("p");
+    myPBirthDate.innerHTML = "Birth date";
+    myPBirthDate.setAttribute("id", "myMessageBirthDate");
+    mysignup.appendChild(myPBirthDate);
+    var myPMobileNumber = document.createElement("p");
+    myPMobileNumber.innerHTML = "Mobile Number";
+    myPMobileNumber.setAttribute("id", "myMessageMobileNumber");
+    mysignup.appendChild(myPMobileNumber);
+    var myPAddress = document.createElement("p");
+    myPAddress.innerHTML = "Address";
+    myPAddress.setAttribute("id", "myMessageAddress");
+    mysignup.appendChild(myPAddress);
+    var myPLocation = document.createElement("p");
+    myPLocation.innerHTML = "Location";
+    myPLocation.setAttribute("id", "myMessageLocation");
+    mysignup.appendChild(myPLocation);
+    var myPPostalCode = document.createElement("p");
+    myPPostalCode.innerHTML = "Postal Code";
+    myPPostalCode.setAttribute("id", "myMessagePostalCode");
+    mysignup.appendChild(myPPostalCode);
+    var myPEmail = document.createElement("p");
+    myPEmail.innerHTML = "Email";
+    myPEmail.setAttribute("id", "myMessageEmail");
+    mysignup.appendChild(myPEmail);
+    var myPPassword = document.createElement("p");
+    myPPassword.innerHTML = "Password";
+    myPPassword.setAttribute("id", "myMessagePassword");
+    mysignup.appendChild(myPPassword);
+    var myPRepeatPassword = document.createElement("p");
+    myPRepeatPassword.innerHTML = "Repeat Password";
+    myPRepeatPassword.setAttribute("id", "myMessageRepeatPassword");
+    mysignup.appendChild(myPRepeatPassword);
 
 /*FUNCTIONS*/
 function hasCapitalLetter(userInput) {
@@ -78,9 +122,9 @@ function quantityNumbers(userInput) {
 }
 
 function showMyRedMessage(theMessage) {
-    myP = document.getElementById("myMessage");
-    myP.className="red-style";
-    myP.textContent = theMessage;
+    myPName = document.getElementById("myMessageName");
+    myPName.className="red-style";
+    myPName.textContent = theMessage;
 }
 
 function isValidName(data) {
@@ -179,7 +223,7 @@ function isValidRepeatPassword(data) {
 
 /*VALIDATIONS*/
 name.onblur = function() {
-    if ( isValidName(name.value)) {
+    if (isValidName(name.value)) {
         name.className="form-input";
     }
     else {
@@ -272,7 +316,7 @@ postalCode.onblur = function() {
     }
 }
 
-postalCode.onfocus= function() {
+postalCode.onfocus = function() {
     showMyRedMessage(' ');
 }
 
@@ -296,6 +340,10 @@ password.onblur = function() {
     }
 }
 
+password.onfocus = function() {
+
+}
+
 repeatPassword.onblur = function() {
     if (isValidRepeatPassword(repeatPassword.value)) {
         repeatPassword.className="red-border";
@@ -306,11 +354,14 @@ repeatPassword.onblur = function() {
     }
 }
 
+repeatPassword.onfocus = function() {
+
+}
+
 signUpButton.onclick = function(e){
     e.preventDefault();
     console.log(name.value+isValidName(name.value));
     console.log(lastName.value+isValidLastname(lastName.value));
-
     var signUpArray = [];
     var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?';
      if (isValidName(name.value) && isValidLastName(lastName.value)) {
@@ -324,7 +375,6 @@ signUpButton.onclick = function(e){
          signUpArray.push('&address=' + address.value);
          signUpArray.push('&zip=' + postalCode.value);
          signUpArray.push('&phone=' + mobileNumber.value);
-
          for (i=0; i < signUpArray.length; i++){
             url=url+signUpArray[i];
          }
@@ -348,7 +398,6 @@ signUpButton.onclick = function(e){
                 else {
                     console.log("not data yet");
                 }
-          
               //  console.log(data.msg);
              })
              .catch(function(error) {
