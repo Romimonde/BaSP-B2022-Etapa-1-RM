@@ -13,52 +13,48 @@ window.onload = function() {
     var repeatPassword = document.getElementById("repeat-password");
     var mysignup = document.getElementById("sign-up-form");
     var signUpButton = document.getElementById("sign-up")
-    // var myP = document.createElement("p");
-    // myP.innerHTML = " ";
-    // myP.setAttribute("id", "myMessage");
-    // mysignup.appendChild(myP);
     var myPName = document.createElement("p");
-    myPName.innerHTML = "Name";
+    myPName.innerHTML = " ";
     myPName.setAttribute("id", "myMessageName");
     mysignup.appendChild(myPName);
     var myPLastName = document.createElement("p");
-    myPLastName.innerHTML = "LastName";
+    myPLastName.innerHTML = " ";
     myPLastName.setAttribute("id", "myMessageLastName");
     mysignup.appendChild(myPLastName);
     var myPDni = document.createElement("p");
-    myPDni.innerHTML = "DNI";
+    myPDni.innerHTML = " ";
     myPDni.setAttribute("id", "myMessageDNI");
     mysignup.appendChild(myPDni);
     var myPBirthDate = document.createElement("p");
-    myPBirthDate.innerHTML = "Birth date";
+    myPBirthDate.innerHTML = " ";
     myPBirthDate.setAttribute("id", "myMessageBirthDate");
     mysignup.appendChild(myPBirthDate);
     var myPMobileNumber = document.createElement("p");
-    myPMobileNumber.innerHTML = "Mobile Number";
+    myPMobileNumber.innerHTML = " ";
     myPMobileNumber.setAttribute("id", "myMessageMobileNumber");
     mysignup.appendChild(myPMobileNumber);
     var myPAddress = document.createElement("p");
-    myPAddress.innerHTML = "Address";
+    myPAddress.innerHTML = " ";
     myPAddress.setAttribute("id", "myMessageAddress");
     mysignup.appendChild(myPAddress);
     var myPLocation = document.createElement("p");
-    myPLocation.innerHTML = "Location";
+    myPLocation.innerHTML = " ";
     myPLocation.setAttribute("id", "myMessageLocation");
     mysignup.appendChild(myPLocation);
     var myPPostalCode = document.createElement("p");
-    myPPostalCode.innerHTML = "Postal Code";
+    myPPostalCode.innerHTML = " ";
     myPPostalCode.setAttribute("id", "myMessagePostalCode");
     mysignup.appendChild(myPPostalCode);
     var myPEmail = document.createElement("p");
-    myPEmail.innerHTML = "Email";
+    myPEmail.innerHTML = " ";
     myPEmail.setAttribute("id", "myMessageEmail");
     mysignup.appendChild(myPEmail);
     var myPPassword = document.createElement("p");
-    myPPassword.innerHTML = "Password";
+    myPPassword.innerHTML = " ";
     myPPassword.setAttribute("id", "myMessagePassword");
     mysignup.appendChild(myPPassword);
     var myPRepeatPassword = document.createElement("p");
-    myPRepeatPassword.innerHTML = "Repeat Password";
+    myPRepeatPassword.innerHTML = " ";
     myPRepeatPassword.setAttribute("id", "myMessageRepeatPassword");
     mysignup.appendChild(myPRepeatPassword);
 
@@ -121,12 +117,129 @@ function quantityNumbers(userInput) {
     return q;
 }
 
-function showMyRedMessage(theMessage) {
+//INVALID MESSAGES FUNCTIONS
+function showNameMessage(theMessage) {
     myPName = document.getElementById("myMessageName");
     myPName.className="red-style";
     myPName.textContent = theMessage;
 }
 
+function dontShowNameMessage(theMessage) {
+    myPName = document.getElementById("myMessageName");
+    myPName.className="non-visible";
+}
+
+function showLastNameMessage(theMessage) {
+    myPLastName = document.getElementById("myMessageLastName");
+    myPLastName.className="red-style";
+    myPLastName.textContent = theMessage;
+}
+
+function dontShowLastNameMessage(theMessage) {
+    myPLastName = document.getElementById("myMessageLastName");
+    myPLastName.className="non-visible";
+}
+
+function showDniMessage(theMessage) {
+    myPDni = document.getElementById("myMessageDNI");
+    myPDni.className="red-style";
+    myPDni.textContent = theMessage;
+}
+
+function dontShowDniMessage(theMessage) {
+    myPDni = document.getElementById("myMessageDNI");
+    myPDni.className="non-visible";
+}
+
+function showBirthDateMessage(theMessage) {
+    myPBirthDate = document.getElementById("myMessageBirthDate");
+    myPBirthDate.className="red-style";
+    myPBirthDate.textContent = theMessage;
+}
+
+function dontShowBirthDateMessage(theMessage) {
+    myPBirthDate = document.getElementById("myMessageBirthDate");
+    myPBirthDate.className="non-visible";
+}
+
+function showMobileNumberMessage(theMessage) {
+    myPMobileNumber = document.getElementById("myMessageMobileNumber");
+    myPMobileNumber.className="red-style";
+    myPMobileNumber.textContent = theMessage;
+}
+
+function dontShowMobileNumberMessage(theMessage) {
+    myPMobileNumber = document.getElementById("myMessageMobileNumber");
+    myPMobileNumber.className="non-visible";
+}
+
+function showAddressMessage(theMessage) {
+    myPAddress = document.getElementById("myMessageAddress");
+    myPAddress.className="red-style";
+    myPAddress.textContent = theMessage;
+}
+
+function dontShowAddressMessage(theMessage) {
+    myPAddress = document.getElementById("myMessageAddress");
+    myPAddress.className="non-visible";
+}
+
+function showLocationMessage(theMessage) {
+    myPLocation = document.getElementById("myMessageLocation");
+    myPLocation.className="red-style";
+    myPLocation.textContent = theMessage;
+}
+
+function dontShowLocationMessage(theMessage) {
+    myPLocation = document.getElementById("myMessageLocation");
+    myPLocation.className="non-visible";
+}
+
+function showPostalCodeMessage(theMessage) {
+    myPPostalCode = document.getElementById("myMessagePostalCode");
+    myPPostalCode.className="red-style";
+    myPPostalCode.textContent = theMessage;
+}
+
+function dontShowPostalCodeMessage(theMessage) {
+    myPPostalCode = document.getElementById("myMessagePostalCode");
+    myPPostalCode.className="non-visible";
+}
+
+function showEmailMessage(theMessage) {
+    myPEmail = document.getElementById("myMessageEmail");
+    myPEmail.className="red-style";
+    myPEmail.textContent = theMessage;
+}
+
+function dontShowEmailMessage(theMessage) {
+    myPEmail = document.getElementById("myMessageEmail");
+    myPEmail.className="non-visible";
+}
+
+function showPasswordMessage(theMessage) {
+    myPPassword = document.getElementById("myMessagePassword");
+    myPPassword.className="red-style";
+    myPPassword.textContent = theMessage;
+}
+
+function dontShowPasswordMessage(theMessage) {
+    myPPassword = document.getElementById("myMessagePassword");
+    myPPassword.className="non-visible";
+}
+
+function showRepeatPasswordMessage(theMessage) {
+    myPRepeatPassword = document.getElementById("myMessageRepeatPassword");
+    myPRepeatPassword.className="red-style";
+    myPRepeatPassword.textContent = theMessage;
+}
+
+function dontShowRepeatPasswordMessage(theMessage) {
+    myPRepeatPassword = document.getElementById("myMessageRepeatPassword");
+    myPRepeatPassword.className="non-visible";
+}
+
+//VALIDATIONS FUNCTIONS
 function isValidName(data) {
     if ((data.length>3) && (hasCapitalLetter(data)) && (hasNumber(data)!=true)) {
         return true;
@@ -243,14 +356,29 @@ function formatDate(myDate) {
 name.onblur = function() {
     if (isValidName(name.value)) {
         name.className="form-input";
+        var dataArray = [];
+	dataArray=JSON.parse(window.localStorage.getItem(name.value));
+	if (dataArray.length>0) {  
+		name.value=dataArray[0].replace("name=","");
+		lastName.value=dataArray[1].replace("&lastName=","") 
+		email.value=dataArray[2].replace("&email=","");
+		dni.value=dataArray[3].replace("&dni=","");
+		birthDate.value=dataArray[4].replace("&dob=","");
+		location.value=dataArray[5].replace("&city=","");
+		address.value=dataArray[6].replace("&address=","");
+		postalCode.value=dataArray[7].replace("&zip=","");
+		mobileNumber.value=dataArray[8].replace("&phone=","");
+        password.value=dataArray[9].replace("&password=","");
+	}
     }
     else {
         name.className="red-border";
-        showMyRedMessage("Invalid Name");
+        showNameMessage("Invalid Name");
     }
 }
 
 name.onfocus = function() {
+    dontShowNameMessage();
 }
 
 lastName.onblur = function() {
@@ -259,12 +387,12 @@ lastName.onblur = function() {
     }
     else {
         lastName.className="red-border";
-        showMyRedMessage('Invalid Lastname'); 
+        showLastNameMessage('Invalid Lastname'); 
     }
 }
 
 lastName.onfocus = function() {
-    showMyRedMessage(' ');
+    dontShowLastNameMessage();
 }
 
 dni.onblur = function() {
@@ -273,12 +401,12 @@ dni.onblur = function() {
     }
     else {
         dni.className="red-border";
-        showMyRedMessage('Invalid DNI');
+        showDniMessage('Invalid DNI');
     }
 }
 
 dni.onfocus = function() {
-    showMyRedMessage(' ');
+    dontShowDniMessage();
 }
 
 birthDate.onblur = function() {
@@ -287,8 +415,12 @@ birthDate.onblur = function() {
     }
     else {
         birthDate.className="red-border";
-        showMyRedMessage('Invalid date')
+        showBirthDateMessage('Invalid Date')
     }
+}
+
+birthDate.onfocus = function() {
+    dontShowBirthDateMessage();
 }
 
 mobileNumber.onblur = function() {
@@ -297,12 +429,12 @@ mobileNumber.onblur = function() {
     }
     else {
         mobileNumber.className="red-border-mobile-number";
-        showMyRedMessage('Invalid Mobile Number');
+        showMobileNumberMessage('Invalid Mobile Number');
     }
 }
 
 mobileNumber.onfocus= function() {
-    showMyRedMessage(' ');
+    dontShowMobileNumberMessage();
 }
 
 address.onblur = function() {
@@ -311,12 +443,12 @@ address.onblur = function() {
     }
     else {
         address.className="red-border";
-        showMyRedMessage('Invalid Address');
+        showAddressMessage('Invalid Address');
     }
 }
 
 address.onfocus = function() {
-    showMyRedMessage(' ');
+    dontShowAddressMessage();
 }
 
 location.onblur = function() {
@@ -325,12 +457,12 @@ location.onblur = function() {
     }
     else {
         location.className="red-border";
-        showMyRedMessage('Invalid Location');
+        showLocationMessage('Invalid Location');
     }
 }
 
 location.onfocus = function() {
-    showMyRedMessage(' ');
+    dontShowLocationMessage();
 }
 
 postalCode.onblur = function() {
@@ -339,12 +471,12 @@ postalCode.onblur = function() {
     }
     else {
         postalCode.className="red-border";
-        showMyRedMessage('Invalid Postal Code');
+        showPostalCodeMessage('Invalid Postal Code');
     }
 }
 
 postalCode.onfocus = function() {
-    showMyRedMessage(' ');
+    dontShowPostalCodeMessage();
 }
 
 email.onblur = function() {
@@ -353,8 +485,12 @@ email.onblur = function() {
     }
     else {
         email.className="red-border";
-        showMyRedMessage('Invalid Email');
+        showEmailMessage('Invalid Email');
     }
+}
+
+postalCode.onfocus = function() {
+    dontShowEmailMessage();
 }
 
 password.onblur = function() {
@@ -363,11 +499,12 @@ password.onblur = function() {
     }
     else {
         password.className="red-border";
-        showMyRedMessage('Invalid Password')
+        showPasswordMessage('Invalid Password')
     }
 }
 
 password.onfocus = function() {
+    dontShowPasswordMessage();
 }
 
 repeatPassword.onblur = function() {
@@ -376,12 +513,12 @@ repeatPassword.onblur = function() {
     }
     else{
         repeatPassword.className="red-border";
-        showMyRedMessage('Invalid Password')
+        showRepeatPasswordMessage('Invalid Password')
     }
 }
 
 repeatPassword.onfocus = function() {
-
+    dontShowRepeatPasswordMessage()
 }
 
 signUpButton.onclick = function(e){
@@ -406,6 +543,7 @@ signUpButton.onclick = function(e){
             url=url+signUpArray[i];
          }
          console.log(signUpArray);
+         window.localStorage.setItem(name.value, JSON.stringify(signUpArray));
          fetch(url)
              .then(function(response) {
                 //  if (response.ok) {
@@ -417,8 +555,8 @@ signUpButton.onclick = function(e){
                 return response.json();
              })
              .then(function(data) {
-                console.log("en data " + data.sucess);
-                if (data.sucess==true) {
+                console.log("en data " + data.success);
+                if (data.success==true) {
                     alert(data.msg);
                 }
                 else {
