@@ -78,7 +78,7 @@ function hasLowerLetter(userInput) {
 }
 
 function hasNumber(userInput) {
-    var numbers = '012345678';
+    var numbers = '0123456789';
     for (i=0; i < userInput.length; i++){
         if (numbers.indexOf(userInput.charAt(i),0)!=-1)
             return true;
@@ -356,21 +356,7 @@ function formatDate(myDate) {
 name.onblur = function() {
     if (isValidName(name.value)) {
         name.className="form-input";
-        var dataArray = [];
-	dataArray=JSON.parse(window.localStorage.getItem(name.value));
-	if (dataArray.length>0) {  
-		name.value=dataArray[0].replace("name=","");
-		lastName.value=dataArray[1].replace("&lastName=","") 
-		email.value=dataArray[2].replace("&email=","");
-		dni.value=dataArray[3].replace("&dni=","");
-		birthDate.value=dataArray[4].replace("&dob=","");
-		location.value=dataArray[5].replace("&city=","");
-		address.value=dataArray[6].replace("&address=","");
-		postalCode.value=dataArray[7].replace("&zip=","");
-		mobileNumber.value=dataArray[8].replace("&phone=","");
-        password.value=dataArray[9].replace("&password=","");
 	}
-    }
     else {
         name.className="red-border";
         showNameMessage("Invalid Name");
@@ -555,9 +541,8 @@ signUpButton.onclick = function(e){
                 return response.json();
              })
              .then(function(data) {
-                console.log("en data " + data.success);
+                console.log('Data:' + data);
                 if (data.success==true) {
-                    alert(data.msg);
                 }
                 else {
                     console.log("not data yet");
@@ -565,7 +550,6 @@ signUpButton.onclick = function(e){
               //  console.log(data.msg);
              })
              .catch(function(error) {
-              //  alert(error.msg+"error");
                 console.log(error);
              })
     }

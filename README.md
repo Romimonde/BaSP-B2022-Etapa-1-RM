@@ -1,5 +1,6 @@
 # Trackgenix
 
+
 # Description:
 Trackgenix is an amazing app that helps you track your teams' progress.
 In this app you can easily add a Project you're working on, add employees to this projects, and assign them roles and rates.
@@ -42,16 +43,20 @@ We had to agree on the style we wanted to apply and divided the work by the role
 
 ## Semana 2
 We started creating the html structure of the landing page on VSCode. Trying to make the best Layout for this project.
+GitHub: https://romimonde.github.io/BaSP-B2022-Etapa-1-RM/Semana-02/
 
 ## Semana 3
 We started the styling of the landing page using css, trying it is a pixel perfect representation.
 To approach this, we had to made some changes on the html structure.
+GitHub: https://romimonde.github.io/BaSP-B2022-Etapa-1-RM/Semana-03/
 
 ## Semana 4
 We made the landing page responsive, using the logic of mobile first.
+GitHub: https://romimonde.github.io/BaSP-B2022-Etapa-1-RM/Semana-04/
 
 ## Semana 5
 We start doing some JavaScript excercises to learn how it works before we applied it to the website.
+GitHub: https://romimonde.github.io/BaSP-B2022-Etapa-1-RM/Semana-05/
 
 ## Semana 6
 We added the login and sign up functionalities to the landing page.
@@ -59,5 +64,10 @@ We added the login and sign up functionalities to the landing page.
 First, we made the html structure of the login and sign up pages and linked them to the landing page.
 Then, we gave style to the pages and form.
 Finally, we added the functionalities, alerts and validations with javascript.
+GitHub: https://romimonde.github.io/BaSP-B2022-Etapa-1-RM/Semana-06/views/index
+
+## Semana 7
+We added the functionality to save the data subbmited to the forms using the local storage.
+GitHub: https://romimonde.github.io/BaSP-B2022-Etapa-1-RM/Semana-07/views/index
 
 ### Author: Radium Rocket BaSP Group B

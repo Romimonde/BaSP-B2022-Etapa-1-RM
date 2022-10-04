@@ -93,7 +93,6 @@ loginButton.onclick = function(e){
          loginArray.push('&password=' + password.value);
          fetch(url+loginArray[0]+loginArray[1])
              .then(function(response) {
-                //console.log(response.json());
                 if (response.ok) {
                     alert("Login succesfull");
                 }
@@ -104,7 +103,6 @@ loginButton.onclick = function(e){
              })
              .then(function(data) {
                alert(data.msg);
-              //  console.log(data.msg);
              })
              .catch(function(error) {
               //  alert(error.msg+"error");
