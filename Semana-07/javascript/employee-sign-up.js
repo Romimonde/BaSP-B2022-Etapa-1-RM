@@ -232,6 +232,13 @@ function isValidRepeatPassword(data, data2) {
     }
 }
 
+function formatDate(myDate) {
+    var arr = [];
+    arr = myDate.split("-");
+    fecha = arr[1]+"/"+arr[2]+"/"+arr[0];
+    return fecha;
+}
+
 /*VALIDATIONS*/
 name.onblur = function() {
     if (isValidName(name.value)) {
@@ -379,33 +386,34 @@ repeatPassword.onfocus = function() {
 
 signUpButton.onclick = function(e){
     e.preventDefault();
-    console.log(name.value+isValidName(name.value));
-    console.log(lastName.value+isValidLastName(lastName.value));
     var signUpArray = [];
     var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?';
      if (isValidName(name.value) && isValidLastName(lastName.value) && isValidEmail(email.value)
-        && isValidDni(dni.value) && is) {
+        && isValidDni(dni.value) && isValidBirthDate(birthDate.value) && isValidLocation(location.value)
+        && isValidAddress(address.value) && isValidPostalCode(postalCode.value)
+        && isValidMobileNumber(mobileNumber.value) && isValidPassword(password.value)) {
          signUpArray.push('name=' + name.value);
          signUpArray.push('&lastName=' + lastName.value);
          signUpArray.push('&email=' + email.value);
          signUpArray.push('&dni=' + dni.value);
-         signUpArray.push('&dob=' + birthDate.value);
+         signUpArray.push('&dob=' + formatDate(birthDate.value));
          signUpArray.push('&city=' + location.value);
          signUpArray.push('&address=' + address.value);
          signUpArray.push('&zip=' + postalCode.value);
          signUpArray.push('&phone=' + mobileNumber.value);
+         signUpArray.push('&password=' + password.value);
          for (i=0; i < signUpArray.length; i++){
             url=url+signUpArray[i];
          }
-         alert (signUpArray);
+         console.log(signUpArray);
          fetch(url)
              .then(function(response) {
-                 if (response.ok) {  //pending promise
-                     alert("Signup IN PROGRESS");
-                 }
-                  if (response.success==true) {
-                      alert(response.msg);
-                 }
+                //  if (response.ok) {
+                //      alert("Signup in Progress");
+                //  }
+                //   if (response.success==true) {
+                //       alert(response.msg);
+                //  }
                 return response.json();
              })
              .then(function(data) {
