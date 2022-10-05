@@ -16,54 +16,54 @@ var myformlogin = document.getElementById("login-form");
 myformlogin.appendChild(myP);
 
 
-/*FUNCTIONS*/
-function quantityLetters(userInput) {
-    var q = 0;
-    for (i=0; i < userInput.length; i++){
-        if (userInput[i]==userInput[i].toUpperCase() && isNaN(userInput[i]))
-        q++;
+    /*FUNCTIONS*/
+    function quantityLetters(userInput) {
+        var q = 0;
+        for (i=0; i < userInput.length; i++){
+            if (userInput[i]==userInput[i].toUpperCase() && isNaN(userInput[i]))
+            q++;
+        }
+        for (i=0; i < userInput.length; i++){
+            if (userInput.charAt(i)==userInput.charAt(i).toLowerCase() && isNaN(userInput[i]))
+            q++;
+        }
+        return q;
     }
-     for (i=0; i < userInput.length; i++){
-         if (userInput.charAt(i)==userInput.charAt(i).toLowerCase() && isNaN(userInput[i]))
-         q++;
-    }
-    return q;
-}
 
-function quantityNumbers(userInput) {
-    var q = 0;
-    for (i=0; i < userInput.length; i++){
-        if (userInput[i]==userInput[i] && !isNaN(userInput[i]))
-        q++;
+    function quantityNumbers(userInput) {
+        var q = 0;
+        for (i=0; i < userInput.length; i++){
+            if (userInput[i]==userInput[i] && !isNaN(userInput[i]))
+            q++;
+        }
+        return q;
     }
-    return q;
-}
 
-function showMyRedMessage(theMessage) {
-    myP = document.getElementById("myMessage");
-    myP.className="red-style";
-    myP.textContent = theMessage;
-}
-function isValidEmail(data) {
-    var regexEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    if (regexEmail.test(data)) {
-        return true;
+    function showMyRedMessage(theMessage) {
+        myP = document.getElementById("myMessage");
+        myP.className="red-style";
+        myP.textContent = theMessage;
     }
-    else{
-        return false;
+    function isValidEmail(data) {
+        var regexEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+        if (regexEmail.test(data)) {
+            return true;
+        }
+        else{
+            return false;
+        }
     }
-}
 
-function isValidPassword(data){
-    if ((quantityLetters(data)>0) && (quantityNumbers(data)>0) && (data.length>7)){
-        return true;
+    function isValidPassword(data){
+        if ((quantityLetters(data)>0) && (quantityNumbers(data)>0) && (data.length>7)){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
-    else {
-        return false;
-    }
-}
+
 /*VALIDATIONS*/
-
 email.onblur = function() {
     if (isValidEmail(email.value)!=true) {
         email.className="red-border";
@@ -89,25 +89,22 @@ loginButton.onclick = function(e){
     var loginArray = [];
     var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?';
      if (isValidEmail(email.value) && isValidPassword(password.value)) {
-         loginArray.push('email=' + email.value);
-         loginArray.push('&password=' + password.value);
-         fetch(url+loginArray[0]+loginArray[1])
-             .then(function(response) {
-                if (response.ok) {
-                    alert("Login succesfull");
-                }
-                 if (response.success==true) {
-                     alert(response.msg);
+        loginArray.push('email=' + email.value);
+        loginArray.push('&password=' + password.value);
+        fetch(url+loginArray[0]+loginArray[1])
+            .then(function(response) {
+                if (response.success==true) {
+                    alert(response.msg);
                 }
                 return response.json();
-             })
-             .then(function(data) {
-               alert(data.msg);
-             })
-             .catch(function(error) {
-              //  alert(error.msg+"error");
+            })
+            .then(function(data) {
+                alert(data.msg);
+            })
+            .catch(function(error) {
+                alert(error.msg+"error");
                 console.log(error);
-             })
+            })
     }
     else {
         alert("Please check email and password");
