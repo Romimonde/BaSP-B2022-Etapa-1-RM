@@ -11,53 +11,62 @@ window.onload = function() {
     var email = document.getElementById("email");
     var password = document.getElementById("password");
     var repeatPassword = document.getElementById("repeat-password");
-    var mysignup = document.getElementById("sign-up-form");
     var signUpButton = document.getElementById("sign-up")
-    var nameLabel = document.getElementById("name-label");
-    var myLabel = document.createElement("label");
-    myLabel.innerHTML = "tuki";
-    myLabel.setAttribute("id", "myMessageName");
-    name.appendChild(myLabel);
-    var myPLastName = document.createElement("p");
-    myPLastName.innerHTML = " ";
-    myPLastName.setAttribute("id", "myMessageLastName");
-    mysignup.appendChild(myPLastName);
-    var myPDni = document.createElement("p");
-    myPDni.innerHTML = " ";
-    myPDni.setAttribute("id", "myMessageDNI");
-    mysignup.appendChild(myPDni);
-    var myPBirthDate = document.createElement("p");
-    myPBirthDate.innerHTML = " ";
-    myPBirthDate.setAttribute("id", "myMessageBirthDate");
-    mysignup.appendChild(myPBirthDate);
-    var myPMobileNumber = document.createElement("p");
-    myPMobileNumber.innerHTML = " ";
-    myPMobileNumber.setAttribute("id", "myMessageMobileNumber");
-    mysignup.appendChild(myPMobileNumber);
-    var myPAddress = document.createElement("p");
-    myPAddress.innerHTML = " ";
-    myPAddress.setAttribute("id", "myMessageAddress");
-    mysignup.appendChild(myPAddress);
-    var myPLocation = document.createElement("p");
-    myPLocation.innerHTML = " ";
-    myPLocation.setAttribute("id", "myMessageLocation");
-    mysignup.appendChild(myPLocation);
-    var myPPostalCode = document.createElement("p");
-    myPPostalCode.innerHTML = " ";
-    myPPostalCode.setAttribute("id", "myMessagePostalCode");
-    mysignup.appendChild(myPPostalCode);
-    var myPEmail = document.createElement("p");
-    myPEmail.innerHTML = " ";
-    myPEmail.setAttribute("id", "myMessageEmail");
-    mysignup.appendChild(myPEmail);
-    var myPPassword = document.createElement("p");
-    myPPassword.innerHTML = " ";
-    myPPassword.setAttribute("id", "myMessagePassword");
-    mysignup.appendChild(myPPassword);
-    var myPRepeatPassword = document.createElement("p");
-    myPRepeatPassword.innerHTML = " ";
-    myPRepeatPassword.setAttribute("id", "myMessageRepeatPassword");
-    mysignup.appendChild(myPRepeatPassword);
+    var nameSection = document.getElementById("name-section");
+    var lastNameSection = document.getElementById("last-name-section");
+    var emailSection = document.getElementById("email-section");
+    var dniSection = document.getElementById("dni-section");
+    var dobSection = document.getElementById("dob-section");
+    var locationSection = document.getElementById("location-section");
+    var addressSection = document.getElementById("address-section");
+    var numberSection = document.getElementById("number-section");
+    var zipSection = document.getElementById("zip-section");
+    var passSection = document.getElementById("pass-section");
+    var repPassSection = document.getElementById("rep-pass-section");
+    var nameLabel = document.createElement("label");
+    nameLabel.innerHTML = ' ';
+    nameLabel.setAttribute("id", "name-label");
+    nameSection.appendChild(nameLabel);
+    var lastNameLabel = document.createElement("label");
+    lastNameLabel.innerHTML = ' ';
+    lastNameLabel.setAttribute("id", "last-name-label");
+    lastNameSection.appendChild(lastNameLabel);
+    var emailLabel = document.createElement("label");
+    emailLabel.innerHTML = ' ';
+    emailLabel.setAttribute("id","email-label");
+    emailSection.appendChild(emailLabel);
+    var dniLabel = document.createElement("label");
+    dniLabel.innerHTML = ' ';
+    dniLabel.setAttribute("id","dni-label");
+    dniSection.appendChild(dniLabel);
+    var dobLabel = document.createElement("label");
+    dobLabel.innerHTML = ' ';
+    dobLabel.setAttribute("id","dob-label");
+    dobSection.appendChild(dobLabel);
+    var locationLabel = document.createElement("label");
+    locationLabel.innerHTML = ' ';
+    locationLabel.setAttribute("id","location-label");
+    locationSection.appendChild(locationLabel);
+    var addressLabel = document.createElement("label");
+    addressLabel.innerHTML = ' ';
+    addressLabel.setAttribute("id","address-label");
+    addressSection.appendChild(addressLabel);
+    var numberLabel = document.createElement("label");
+    numberLabel.innerHTML = ' ';
+    numberLabel.setAttribute("id","number-label");
+    numberSection.appendChild(numberLabel);
+    var zipLabel = document.createElement("label");
+    zipLabel.innerHTML = ' ';
+    zipLabel.setAttribute("id","zip-label");
+    zipSection.appendChild(zipLabel);
+    var passLabel = document.createElement("label");
+    passLabel.innerHTML = ' ';
+    passLabel.setAttribute("id","pass-label");
+    passSection.appendChild(passLabel);
+    var repPassLabel = document.createElement("label");
+    repPassLabel.innerHTML = ' ';
+    repPassLabel.setAttribute("id","rep-pass-label");
+    repPassSection.appendChild(repPassLabel);
 
     if (localStorage.getItem("password")!=null) {
         name.setAttribute('value',localStorage.getItem("name"));
@@ -131,126 +140,10 @@ window.onload = function() {
         return q;
     }
 
-    //INVALID MESSAGES FUNCTIONS
-    function showNameMessage(theMessage) {
-        myPName = document.getElementById("myMessageName");
-        myPName.className="red-style";
-        myPName.textContent = theMessage;
-    }
-
-    function dontShowNameMessage(theMessage) {
-        myPName = document.getElementById("myMessageName");
-        myPName.className="non-visible";
-    }
-
-    function showLastNameMessage(theMessage) {
-        myPLastName = document.getElementById("myMessageLastName");
-        myPLastName.className="red-style";
-        myPLastName.textContent = theMessage;
-    }
-
-    function dontShowLastNameMessage(theMessage) {
-        myPLastName = document.getElementById("myMessageLastName");
-        myPLastName.className="non-visible";
-    }
-
-    function showDniMessage(theMessage) {
-        myPDni = document.getElementById("myMessageDNI");
-        myPDni.className="red-style";
-        myPDni.textContent = theMessage;
-    }
-
-    function dontShowDniMessage(theMessage) {
-        myPDni = document.getElementById("myMessageDNI");
-        myPDni.className="non-visible";
-    }
-
-    function showBirthDateMessage(theMessage) {
-        myPBirthDate = document.getElementById("myMessageBirthDate");
-        myPBirthDate.className="red-style";
-        myPBirthDate.textContent = theMessage;
-    }
-
-    function dontShowBirthDateMessage(theMessage) {
-        myPBirthDate = document.getElementById("myMessageBirthDate");
-        myPBirthDate.className="non-visible";
-    }
-
-    function showMobileNumberMessage(theMessage) {
-        myPMobileNumber = document.getElementById("myMessageMobileNumber");
-        myPMobileNumber.className="red-style";
-        myPMobileNumber.textContent = theMessage;
-    }
-
-    function dontShowMobileNumberMessage(theMessage) {
-        myPMobileNumber = document.getElementById("myMessageMobileNumber");
-        myPMobileNumber.className="non-visible";
-    }
-
-    function showAddressMessage(theMessage) {
-        myPAddress = document.getElementById("myMessageAddress");
-        myPAddress.className="red-style";
-        myPAddress.textContent = theMessage;
-    }
-
-    function dontShowAddressMessage(theMessage) {
-        myPAddress = document.getElementById("myMessageAddress");
-        myPAddress.className="non-visible";
-    }
-
-    function showLocationMessage(theMessage) {
-        myPLocation = document.getElementById("myMessageLocation");
-        myPLocation.className="red-style";
-        myPLocation.textContent = theMessage;
-    }
-
-    function dontShowLocationMessage(theMessage) {
-        myPLocation = document.getElementById("myMessageLocation");
-        myPLocation.className="non-visible";
-    }
-
-    function showPostalCodeMessage(theMessage) {
-        myPPostalCode = document.getElementById("myMessagePostalCode");
-        myPPostalCode.className="red-style";
-        myPPostalCode.textContent = theMessage;
-    }
-
-    function dontShowPostalCodeMessage(theMessage) {
-        myPPostalCode = document.getElementById("myMessagePostalCode");
-        myPPostalCode.className="non-visible";
-    }
-
-    function showEmailMessage(theMessage) {
-        myPEmail = document.getElementById("myMessageEmail");
-        myPEmail.className="red-style";
-        myPEmail.textContent = theMessage;
-    }
-
-    function dontShowEmailMessage(theMessage) {
-        myPEmail = document.getElementById("myMessageEmail");
-        myPEmail.className="non-visible";
-    }
-
-    function showPasswordMessage(theMessage) {
-        myPPassword = document.getElementById("myMessagePassword");
-        myPPassword.className="red-style";
-        myPPassword.textContent = theMessage;
-    }
-
-    function dontShowPasswordMessage(theMessage) {
-        myPPassword = document.getElementById("myMessagePassword");
-        myPPassword.className="non-visible";
-    }
-
-    function showRepeatPasswordMessage(theMessage) {
-        myPRepeatPassword = document.getElementById("myMessageRepeatPassword");
-        myPRepeatPassword.className="red-style";
-        myPRepeatPassword.textContent = theMessage;
-    }
-
-    function dontShowRepeatPasswordMessage(theMessage) {
-        myPRepeatPassword = document.getElementById("myMessageRepeatPassword");
-        myPRepeatPassword.className="non-visible";
+    function showMessage(theMessage, theLabel) {
+        var oneLabel = document.getElementById(theLabel);
+        oneLabel.className="red-style";
+        oneLabel.textContent = theMessage;
     }
 
     //VALIDATIONS FUNCTIONS
@@ -366,212 +259,212 @@ window.onload = function() {
         return fecha;
     }
 
-/*VALIDATIONS*/
-name.onblur = function() {
-    if (isValidName(name.value)) {
-        name.className="form-input";
-	}
-    else {
-        name.className="red-border";
-        showNameMessage("Invalid Name");
-    }
-}
-
-name.onfocus = function() {
-    dontShowNameMessage();
-}
-
-lastName.onblur = function() {
-    if (isValidLastName(lastName.value)) {
-        lastName.className="form-input";
-    }
-    else {
-        lastName.className="red-border";
-        showLastNameMessage('Invalid Lastname'); 
-    }
-}
-
-lastName.onfocus = function() {
-    dontShowLastNameMessage();
-}
-
-dni.onblur = function() {
-    if (isValidDni(dni.value)) {
-        dni.className="form-input";
-    }
-    else {
-        dni.className="red-border";
-        showDniMessage('Invalid DNI');
-    }
-}
-
-dni.onfocus = function() {
-    dontShowDniMessage();
-}
-
-birthDate.onblur = function() {
-    if(isValidBirthDate(birthDate.value)) {
-        birthDate.className="form-input";
-    }
-    else {
-        birthDate.className="red-border";
-        showBirthDateMessage('Invalid Date')
-    }
-}
-
-birthDate.onfocus = function() {
-    dontShowBirthDateMessage();
-}
-
-mobileNumber.onblur = function() {
-    if (isValidMobileNumber(mobileNumber.value)) {
-        mobileNumber.className="form-input";
-    }
-    else {
-        mobileNumber.className="red-border-mobile-number";
-        showMobileNumberMessage('Invalid Mobile Number');
-    }
-}
-
-mobileNumber.onfocus= function() {
-    dontShowMobileNumberMessage();
-}
-
-address.onblur = function() {
-    if (isValidAddress(address.value)) {
-        address.className="form-input";
-    }
-    else {
-        address.className="red-border";
-        showAddressMessage('Invalid Address');
-    }
-}
-
-address.onfocus = function() {
-    dontShowAddressMessage();
-}
-
-location.onblur = function() {
-    if (isValidLocation(location.value)) {
-        location.className="form-input";
-    }
-    else {
-        location.className="red-border";
-        showLocationMessage('Invalid Location');
-    }
-}
-
-location.onfocus = function() {
-    dontShowLocationMessage();
-}
-
-postalCode.onblur = function() {
-    if (isValidPostalCode(postalCode.value)) {
-        postalCode.className="form-input";
-    }
-    else {
-        postalCode.className="red-border";
-        showPostalCodeMessage('Invalid Postal Code');
-    }
-}
-
-postalCode.onfocus = function() {
-    dontShowPostalCodeMessage();
-}
-
-email.onblur = function() {
-    if (isValidEmail(email.value)) {
-        email.className="form-input";
-    }
-    else {
-        email.className="red-border";
-        showEmailMessage('Invalid Email');
-    }
-}
-
-postalCode.onfocus = function() {
-    dontShowEmailMessage();
-}
-
-password.onblur = function() {
-    if (isValidPassword(password.value)) {
-        password.className="form-input";
-    }
-    else {
-        password.className="red-border";
-        showPasswordMessage('Invalid Password')
-    }
-}
-
-password.onfocus = function() {
-    dontShowPasswordMessage();
-}
-
-repeatPassword.onblur = function() {
-    if (isValidRepeatPassword(password.value, repeatPassword.value)) {
-        repeatPassword.className="form-input";
-    }
-    else{
-        repeatPassword.className="red-border";
-        showRepeatPasswordMessage('Invalid Password')
-    }
-}
-
-repeatPassword.onfocus = function() {
-    dontShowRepeatPasswordMessage()
-}
-
-signUpButton.onclick = function(e){
-    e.preventDefault();
-    var signUpArray = [];
-    var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?';
-     if (isValidName(name.value) && isValidLastName(lastName.value) && isValidEmail(email.value)
-        && isValidDni(dni.value) && isValidBirthDate(birthDate.value) && isValidLocation(location.value)
-        && isValidAddress(address.value) && isValidPostalCode(postalCode.value)
-        && isValidMobileNumber(mobileNumber.value) && isValidPassword(password.value)) {
-        signUpArray.push('name=' + name.value);
-        signUpArray.push('&lastName=' + lastName.value);
-        signUpArray.push('&email=' + email.value);
-        signUpArray.push('&dni=' + dni.value);
-        signUpArray.push('&dob=' + formatDate(birthDate.value));
-        signUpArray.push('&city=' + location.value);
-        signUpArray.push('&address=' + address.value);
-        signUpArray.push('&zip=' + postalCode.value);
-        signUpArray.push('&phone=' + mobileNumber.value);
-        signUpArray.push('&password=' + password.value);
-        for (i=0; i < signUpArray.length; i++){
-            url=url+signUpArray[i];
+    /*VALIDATIONS*/
+    name.onblur = function() {
+        if (isValidName(name.value)) {
+            name.className="form-input";
         }
-        fetch(url)
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                console.log('Data:' + data);
-                if (data.success==true) {
-                    alert(data.msg);
-                    window.localStorage.setItem('name', name.value);
-                    window.localStorage.setItem('lastName', lastName.value);
-                    window.localStorage.setItem('email', email.value);
-                    window.localStorage.setItem('dni', dni.value);
-                    window.localStorage.setItem('birthDate', birthDate.value);
-                    window.localStorage.setItem('location', location.value);
-                    window.localStorage.setItem('address', address.value);
-                    window.localStorage.setItem('postalCode', postalCode.value);
-                    window.localStorage.setItem('mobileNumber', mobileNumber.value);
-                    window.localStorage.setItem('lastName', lastName.value);
-                    window.localStorage.setItem('password', password.value);
-                }
-                else {
-                    console.log("not data yet");
-                }
-            })
-            .catch(function(error) {
-                console.log(error);
-            })
+        else {
+            name.className="red-border";
+            showMessage("Invalid name","name-label");
+        }
     }
-    else {
-        alert("Please check the information");
+
+    name.onfocus = function() {
+        showMessage(" ","name-label");
     }
-}
+
+    lastName.onblur = function() {
+        if (isValidLastName(lastName.value)) {
+            lastName.className="form-input";
+        }
+        else {
+            lastName.className="red-border";
+            showMessage("Invalid Lastname","last-name-label");
+        }
+    }
+
+    lastName.onfocus = function() {
+        showMessage(" ","last-name-label");
+    }
+
+    dni.onblur = function() {
+        if (isValidDni(dni.value)) {
+            dni.className="form-input";
+        }
+        else {
+            dni.className="red-border";
+            showMessage("Invalid DNI","dni-label");
+        }
+    }
+
+    dni.onfocus = function() {
+        showMessage(" ", "dni-label");
+    }
+
+    birthDate.onblur = function() {
+        if(isValidBirthDate(birthDate.value)) {
+            birthDate.className="form-input";
+        }
+        else {
+            birthDate.className="red-border";
+            showMessage("Invalid Birth Date","dob-label");
+        }
+    }
+
+    birthDate.onfocus = function() {
+        showMessage(" ","dob-label");
+    }
+
+    mobileNumber.onblur = function() {
+        if (isValidMobileNumber(mobileNumber.value)) {
+            mobileNumber.className="form-input";
+        }
+        else {
+            mobileNumber.className="red-border-mobile-number";
+            showMessage("Invalid Number","number-label");
+        }
+    }
+
+    mobileNumber.onfocus= function() {
+        showMessage(" ","number-label");
+    }
+
+    address.onblur = function() {
+        if (isValidAddress(address.value)) {
+            address.className="form-input";
+        }
+        else {
+            address.className="red-border";
+            showMessage("Invalid Address","address-label");
+        }
+    }
+    0.
+    address.onfocus = function() {
+        showMessage(" ","address-label");
+    }
+
+    location.onblur = function() {
+        if (isValidLocation(location.value)) {
+            location.className="form-input";
+        }
+        else {
+            location.className="red-border";
+            showMessage("Invalid Location","location-label");
+        }
+    }
+
+    location.onfocus = function() {
+        showMessage(" ","location-label");
+    }
+
+    postalCode.onblur = function() {
+        if (isValidPostalCode(postalCode.value)) {
+            postalCode.className="form-input";
+        }
+        else {
+            postalCode.className="red-border";
+            showMessage("Invalid postalCode","zip-label");
+        }
+    }
+
+    postalCode.onfocus = function() {
+        showMessage(" ","zip-label");
+    }
+
+    email.onblur = function() {
+        if (isValidEmail(email.value)) {
+            email.className="form-input";
+        }
+        else {
+            email.className="red-border";
+            showMessage("Invalid Email","email-label");
+        }
+    }
+
+    postalCode.onfocus = function() {
+        showMessage(" ","email-label");
+    }
+
+    password.onblur = function() {
+        if (isValidPassword(password.value)) {
+            password.className="form-input";
+        }
+        else {
+            password.className="red-border";
+            showMessage("Invalid Password","pass-label");
+        }
+    }
+
+    password.onfocus = function() {
+        showMessage(" ","pass-label");
+    }
+
+    repeatPassword.onblur = function() {
+        if (isValidRepeatPassword(password.value, repeatPassword.value)) {
+            repeatPassword.className="form-input";
+        }
+        else{
+            repeatPassword.className="red-border";
+            showMessage("Passwords doesn't match","rep-pass-label");
+        }
+    }
+
+    repeatPassword.onfocus = function() {
+        showMessage(" ","rep-pass-label");
+    }
+
+    signUpButton.onclick = function(e){
+        e.preventDefault();
+        var signUpArray = [];
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?';
+        if (isValidName(name.value) && isValidLastName(lastName.value) && isValidEmail(email.value)
+            && isValidDni(dni.value) && isValidBirthDate(birthDate.value) && isValidLocation(location.value)
+            && isValidAddress(address.value) && isValidPostalCode(postalCode.value)
+            && isValidMobileNumber(mobileNumber.value) && isValidPassword(password.value)) {
+            signUpArray.push('name=' + name.value);
+            signUpArray.push('&lastName=' + lastName.value);
+            signUpArray.push('&email=' + email.value);
+            signUpArray.push('&dni=' + dni.value);
+            signUpArray.push('&dob=' + formatDate(birthDate.value));
+            signUpArray.push('&city=' + location.value);
+            signUpArray.push('&address=' + address.value);
+            signUpArray.push('&zip=' + postalCode.value);
+            signUpArray.push('&phone=' + mobileNumber.value);
+            signUpArray.push('&password=' + password.value);
+            for (i=0; i < signUpArray.length; i++){
+                url=url+signUpArray[i];
+            }
+            fetch(url)
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    if (data.success==true) {
+                        alert(data.msg);
+                        alert(JSON.stringify(data.data));
+                        window.localStorage.setItem('name', name.value);
+                        window.localStorage.setItem('lastName', lastName.value);
+                        window.localStorage.setItem('email', email.value);
+                        window.localStorage.setItem('dni', dni.value);
+                        window.localStorage.setItem('birthDate', birthDate.value);
+                        window.localStorage.setItem('location', location.value);
+                        window.localStorage.setItem('address', address.value);
+                        window.localStorage.setItem('postalCode', postalCode.value);
+                        window.localStorage.setItem('mobileNumber', mobileNumber.value);
+                        window.localStorage.setItem('lastName', lastName.value);
+                        window.localStorage.setItem('password', password.value);
+                    }
+                    else {
+                        console.log("not data yet");
+                    }
+                })
+                .catch(function(error) {
+                    console.log(error);
+                })
+        }
+        else {
+            alert("Please check the information");
+        }
+    }
 }
